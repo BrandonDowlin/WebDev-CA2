@@ -1,0 +1,144 @@
+
+body{
+	background-color: black;
+	
+}
+
+.filterDiv {
+    float: left;
+    background-color: #2196F3;
+    color: #ffffff;
+    width: 10px;
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;
+    display: block;
+	
+
+}
+.container-fluid{
+	margin-left:10%;
+	margin-right:10%;
+}
+
+
+
+table {
+	display: block;
+
+}
+.navbar{
+	margin-left:0%;
+	margin-right:0%;
+}
+
+.main{
+	padding-top:2em;
+	padding-bottom: 5em;
+	background-color: black;
+	border: .5em solid white;
+	padding:2em;
+	border-radius: 4em;
+	color: white;
+}
+
+
+table td{
+	
+padding-top: 1em;
+vertical-align: middle;
+border-radius: .5em;
+text-align:center;
+font-size: 20px;
+padding-bottom: 1em;
+
+font-size: 1.2vw;
+
+
+}
+table .a{
+	background-color: #21146b;
+	
+	
+}
+table .b{
+	background-color: #165182;
+}
+.footer{
+	 
+    background-color: white;
+    color: black;
+	width: 98%;
+	margin-left:1%;
+	
+    
+   
+}
+.footer h3{
+	text-align: center;
+	
+}
+.footer{
+	background-image: url("concert.png");
+	background-repeat: no-repeat;
+	color: grey;
+	font-size: 16px;
+	height: 20em;
+	width: 100%;
+}
+.col-sm-2{
+	background-color: black;
+	border-radius: .2em;
+	border: .1em solid white;
+	padding: 1em;
+	
+	
+	font-size: 1.2vw;
+}
+.col-sm-2 h3{
+	font-size: 1.2vw;
+}
+
+.col-sm-3{
+	background-color: black;
+	border-radius: .2em;
+	border: .1em solid white;
+	padding: 1em;
+	
+	
+	font-size: 1.2vw;
+}
+.col-sm-3 h3{
+	font-size: 1.2vw;
+}
+.footer p{
+	color:white;
+}
+.footer a:link {
+	color: orange;
+}
+.footer a:Visited {
+	color: orange;
+}
+.footer a:active{
+	color:white;
+}
+
+
+.footer h5{
+	color:white;
+}
+.footer p{
+	padding-top:1em;
+	color:orange;
+}
+input.search {
+    background-color:black;
+    color:white;
+	border:.1em solid white;
+}
+input::placeholder{
+	color:white;
+}
+
+	
