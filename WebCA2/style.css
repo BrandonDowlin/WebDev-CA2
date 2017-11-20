@@ -1,6 +1,6 @@
 
 body{
-	background-color: black;
+	background-color: #282c39;
 	
 }
 
@@ -14,31 +14,23 @@ body{
     margin: 2px;
     display: block;
 	
-
-}
-.container-fluid{
-	margin-left:10%;
-	margin-right:10%;
 }
 
-
-
-table {
-	display: block;
-
+.myTable{
+		border-radius: 10em;
 }
-.navbar{
-	margin-left:0%;
-	margin-right:0%;
-}
+
+
+
 
 .main{
 	padding-top:2em;
 	padding-bottom: 5em;
-	background-color: black;
-	border: .5em solid white;
+	background-color: #303030;
+	border: .05em solid black;
+	border-radius: 1em;
 	padding:2em;
-	border-radius: 4em;
+	
 	color: white;
 }
 
@@ -47,12 +39,13 @@ table td{
 	
 padding-top: 1em;
 vertical-align: middle;
-border-radius: .5em;
+
 text-align:center;
 font-size: 20px;
+
 padding-bottom: 1em;
 
-font-size: 1.2vw;
+font-size: 15px;
 
 
 }
@@ -64,16 +57,7 @@ table .a{
 table .b{
 	background-color: #165182;
 }
-.footer{
-	 
-    background-color: white;
-    color: black;
-	width: 98%;
-	margin-left:1%;
-	
-    
-   
-}
+
 .footer h3{
 	text-align: center;
 	
@@ -85,6 +69,10 @@ table .b{
 	font-size: 16px;
 	height: 20em;
 	width: 100%;
+	 background-color: white;
+    color: black;
+	width: 98%;
+	margin-left:1%;
 }
 .col-sm-2{
 	background-color: black;
@@ -104,8 +92,6 @@ table .b{
 	border-radius: .2em;
 	border: .1em solid white;
 	padding: 1em;
-	
-	
 	font-size: 1.2vw;
 }
 .col-sm-3 h3{
@@ -124,7 +110,6 @@ table .b{
 	color:white;
 }
 
-
 .footer h5{
 	color:white;
 }
@@ -138,6 +123,19 @@ input.search {
 	border:.1em solid white;
 }
 input::placeholder{
+	color:white;
+}
+.container-fluid a{
+	background-color: #7e7e7e;
+	
+}
+.container-fluid{
+	margin-left: 9%;
+}
+.navbar-inverse .navbar-nav  li  a {
+	color:white;
+}
+.navbar-inverse .navbar-brand{
 	color:white;
 }
 
