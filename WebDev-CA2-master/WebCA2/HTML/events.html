@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script data-require="jquery@3.0.0" data-semver="3.0.0" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <link data-require="bootstrap@3.3.6" data-semver="3.3.6" rel="stylesheet" href="bootstrap" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img src ="../IMG/logo.png">
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+				<li><a href="venues.html">Venues</a></li>
+                <li class="active"><a href="index.html">Events</a></li>
+				<li><a href="aboutus.html">About us</a></li>
+				
+				<li class="dropdown">
+          <a href="#" class="login-a" data-toggle="dropdown"> <b>Sign in</b> <span class="caret"></span> </a>
+			<ul id="login" class="dropdown-menu">
+				<li>
+					 <div class="row">
+							<div class="col-md-12">
+					
+								<p></p>
+                                
+								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+										<div class="form-group">
+											 <label class="email">Email address</label>
+											 <input type="email" class="form-control" placeholder="Email address" required>
+										</div>
+										<div class="form-group">
+											 <label class="password">Password</label>
+											 <input type="password" class="form-control" placeholder="Password" required>
+										<p></p>
+										<div class="form-group">
+											 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+										</div>
+										
+            
+            </ul>
+			</li>
+
+            </ul>
+        </div>
+    </nav>  
+
+    <div class="container">
+   
+                <!-- first row in middle section -->
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="well main">
+
+  <h2>Filter Table</h2>
+  <p>Search for a location in the input field.</p>
+
+  <input class="search" type="text" placeholder="Search by location.." id="myInput" onkeyup="myFunction()">
+
+  <table class="w3-table-all w3-margin-top" id="myTable">
+    <tr>
+      <th style="width:20%;text-align:center">Date</th>
+      <th style="width:20%;text-align:center">Country</th>
+	  <th style="width:20%;text-align:center">City</th>
+    </tr>
+	 
+    <tr class="ae">
+	
+      <td>1st January 2018</td>
+      <td>Germany</td>
+	  <td>Frankfurt</td>
+
+    </tr>
+    <tr class="be">
+      <td>3rd November 2018</td>
+      <td>Sweden</td>
+	  <td>Stockholm</td>
+    </tr>
+    <tr>
+	<tr class="ae">
+      <td>8th December 2017</td>
+      <td>UK</td>
+	  <td>London</td>
+    </tr>
+	
+    <tr>
+	<tr class="be">
+      <td>27th May 2018</td>
+      <td>Germany</td>
+	  <td>Berlin</td>
+    </tr>
+    <tr>
+	<tr class="ae">
+      <td>13th March 2018</td>
+      <td>Canada</td>
+	  <td>Victoria</td>
+    </tr>
+    <tr>
+	<tr class="be">
+      <td>11th February 2018</td>
+      <td>Italy</td>
+	  <td>Venice</td>
+    </tr>
+    <tr>
+	<tr class="ae">
+      <td>1st December 2018</td>
+      <td>UK</td>
+	  <td>Belfast</td>
+    </tr>
+    <tr>
+	<tr class="be">
+      <td>19th March 2018</td>
+      <td>France</td>
+	  <td>Avignon</td>
+    </tr>
+	
+  </table>
+  </div></div></div>
+  <div class="row">
+	<div class="col-sm-12">
+		<div class="well footer">
+		
+			
+			<div class="col-sm-2">
+           <h3>Navigation</h3> 
+		   <h5>Site links</h5>
+		   <li><a href="index.html">Home</a></li>
+		   <li><a href="venues.html">Venues</a></li>
+		    <li class="active"><a href="events.html">Events</a></li>
+		   <li><a href="aboutus.html">About us</a></li>
+		   </div>
+		   <div class="col-sm-7">
+		   </div>
+		   <div class="col-sm-3">  
+		   <h3>Contact us</h3>
+		   <h5>Contact Information</h5>
+		   <p>Email: blahblah@gmail.com</p>
+		   <p>Phone: 0865341735</p>
+    </div>
+            
+		</div></div></div>
+
+  
+  
+
+
+
+
+
+</div>
+
+</body>
+
+           
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+</html>
