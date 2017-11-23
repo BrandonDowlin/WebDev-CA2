@@ -1,0 +1,238 @@
+body {
+    background-color: #282c39;
+    overflow: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.main {
+    padding-top: 2em;
+    padding-bottom: 5em;
+    background-color: #303030;
+    border: .5em solid black;
+    border-radius: 1em;
+    padding: 2em;
+    margin-left: 20%;
+    margin-right: -43%;
+    color: black;
+    margin-top: 5%;
+}
+
+
+.footer {
+
+    color: grey;
+    font-size: 16px;
+    color: black;
+    width: 98%;
+    margin-left: 1%;
+	margin-bottom: 5%;
+	
+}
+.footer img{
+	width: 91.3%;
+	height: 20em;
+	margin-left: 8.6%;
+	margin-top: -3%;
+	border: .1em solid white;
+	border-radius:.5em;
+}
+.footerprofile {
+
+    color: grey;
+    font-size: 16px;
+    color: black;
+    width: 98%;
+    margin-left: 1%;
+	margin-bottom: 5%;
+	
+}
+.footerprofile img{
+	width: 59.4%;
+	height: 20em;
+	margin-left: 23%;
+	
+	
+	border: .1em solid white;
+	border-radius:.5em;
+}
+
+
+input.search {
+    background-color: black;
+    color: white;
+    border: .1em solid white;
+}
+
+input::placeholder {
+    color: white;
+}
+
+.container-fluid a {
+    background-color: #7e7e7e;
+}
+
+.navbar-inverse .navbar-nav li a {
+    color: white;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+#slideshow .well {
+    background-color: #303030;
+    border: .05em solid black;
+    color: white;
+}
+
+#slideshow img {
+    margin: auto;
+    height: 25em;
+}
+
+#slideWell {
+    margin: auto;
+}
+
+#myCarousel .carousel-caption h4 {
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#Content .well {
+    margin: auto;
+    background-color: #303030;
+    border: .05em solid black;
+    color: white;
+    margin-top: 1%;
+    margin-right: -49%;
+    height: 500px;
+    margin-bottom: 10%;
+}
+
+#contentWell h1 {
+    text-align: center;
+}
+
+#deadSpace .well {
+    height: 4em;
+    background-color: #282c39;
+    border: none;
+}
+
+#wrapper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#left .well {
+    background-color: #303030;
+    border: .05em solid black;
+    color: white;
+    text-align: center;
+}
+
+#right .well {
+    background-color: #303030;
+    border: .05em solid black;
+    color: white;
+}
+
+#login {
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+#login .bottom {
+    background-color: rgba(255, 255, 255, .8);
+    border-top: 1px solid #ddd;
+    clear: both;
+    padding: 14px;
+}
+
+#login .login {
+    margin-bottom: 10px;
+}
+
+nav {
+    margin-left: 10%;
+    margin-right: 2.3%;
+}
+
+img {
+    height: 50px;
+}
+
+.low {
+    margin-top: 10%;
+}
+.panel {
+	background-color: #282c39;
+	color: white;
+	border-color: black;
+	text-align: start;
+	text-shadow: -1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
+}
+.panel-body {
+	padding: 0;
+  }
+.panel img {
+	width:100%;
+	height:7.5em;
+}
+.panel-heading {
+	background-color: #282c39;
+}
+.panel-body {
+	
+	padding-bottom: 6.5em;
+	background-size: cover;
+	text-align: start;
+	padding-left: 5px;
+	padding-top: 2px;
+	
+}
+.panel > .panel-heading {
+    background-image: none;
+    color: white;
+	background-color: #303030;
+	text-align: center;
+	border-color: black;
+	padding-bottom: 1px;
+}
+
+#panel1 .panel-body {
+	background-image: url("/assets/images/Danny.png");
+}
+#panel2 .panel-body {
+	background-image: url("/assets/images/Gorillaz.png");
+}
+#panel3 .panel-body {
+	background-image: url("/assets/images/Jeff.png");
+}
+#panel4 .panel-body {
+	background-image: url("/assets/images/Kanye.png");
+}
+#panel5 .panel-body {
+	background-image: url("/assets/images/Keith.png");
+}
+#panel6 .panel-body {
+	background-image: url("/assets/images/Michael.png");
+}
+#contentWell img {
+	height: 10em;
+	float: left;
+    margin-right: 10px;
+    clear:both;
+}
+#contentWell p {
+	padding-bottom: 1em;
+}

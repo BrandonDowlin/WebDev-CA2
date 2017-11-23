@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\brand\Documents\WebDev-CA2-master\WebCA2 Play\app\views\index.scala.html:11:65: value at is not a member of controllers.ReverseAssets[0m
+[0m[[0m[31merror[0m] [0m[0m    <link rel="stylesheet" type="text/css" href='@routes.Assets.at("bootstrap/css/bootstrap.css")' />[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\brand\Documents\WebDev-CA2-master\WebCA2 Play\app\views\index.scala.html:12:57: value at is not a member of controllers.ReverseAssets[0m
+[0m[[0m[31merror[0m] [0m[0m    <script  type="text/javascript" src='@routes.Assets.at("bootstrap/js/bootstrap.js")'></script>[0m
+[0m[[0m[31merror[0m] [0m[0m                                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

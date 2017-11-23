@@ -1,0 +1,2 @@
+[0m[[0m[31merror[0m] [0m[0m[Error] C:\Users\brand\Documents\WebDev-CA2-master\WebCA2 Play\app\views\aboutus.scala.html:6[0m
+[0m[[0m[31merror[0m] [0m[0m    <script data-require="jquery@3.0.0" data-semver="3.0.0" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>: Invalid '@' symbol[0m
