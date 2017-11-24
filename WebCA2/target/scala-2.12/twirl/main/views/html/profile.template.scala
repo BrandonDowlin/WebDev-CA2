@@ -49,7 +49,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
             <div class="navbar-header">
                 <img src ="/assets/images/logo.png">
             </div>
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav"><li><a href="/"><font color="#d3d3d3"; size="3">Ticket Shark |</font></a></li>
                 <li><a href="/">Home</a></li>
                 <li><a href="/venues">Venues</a></li>
                 <li><a href="/events">Events</a></li>
@@ -59,37 +59,37 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
     </nav>
     <div class="container">
         <div class="col-sm-8">
-            <div class="well main">
+            <div class="well main1">
 
                 <div class="row">
                     <div class="col-sm-6">
-                        <div class="well">
+                        <div class="wellprofile">
                             <h4>Account balance</h4>
                             <p>€0.00</p>
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="well">
+                        <div class="wellprofile">
                             <h4>Profile Information</h4>
                             <p>Name: dd</p>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="well low">
+                        <div class="wellprofilelow">
                             <h4>Last Transaction</h4>
                             <p>blah</p>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="well low">
+                        <div class="wellprofilelow">
                             <h4>Email address</h4>
                             <p> fdfdf@gmail.com</p>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="well low">
+                        <div class="wellprofilelow">
                             <h4>Update profile</h4>
-                            <li><a href="form.html">Click me</li>
+                            <li><a href="/form">Click me</li>
 						</div>
 					</div>
 
@@ -123,9 +123,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 10:20:56 GMT 2017
-                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/profile.scala.html
-                  HASH: 901066136cb4e52152dc9b50231574e8cc947910
+                  DATE: Fri Nov 24 14:06:34 GMT 2017
+                  SOURCE: /home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/profile.scala.html
+                  HASH: 1999d1b26111d6122f0d196fe28a9b3a18bd74c8
                   MATRIX: 1032->0
                   LINES: 33->1
                   -- GENERATED --

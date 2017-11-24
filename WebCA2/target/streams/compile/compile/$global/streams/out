@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/fuck off/WebDev-CA2/WebCA2/app/controllers/HomeController.java:36:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   variable danny[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class controllers.HomeController[0m
-[0m[[0m[31merror[0m] [0m[0m        return ok(danny.render());[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/aboutus.scala.html:64:94: not found: value gmail[0m
+[0m[[0m[31merror[0m] [0m[0m                    <h4>If you have any questions please contact us by Email: theTicketShark@gmail.com  or by phone at 085835830</h4>[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

@@ -4,7 +4,7 @@
 		module="webca2-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20171124095636"
+		publication="20171124121749"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>

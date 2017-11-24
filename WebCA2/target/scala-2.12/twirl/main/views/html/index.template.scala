@@ -50,7 +50,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
             <div class="navbar-header">
                 <img src ="/assets/images/logo.png">
             </div>
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav"><li><a href="/"><font color="#d3d3d3"; size="3">Ticket Shark |</font></a></li>
                 <li class="active"><a href="/">Home</a></li>
                 <li><a href="/venues">Venues</a></li>
                 <li><a href="/events">Events</a></li>
@@ -92,27 +92,39 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <div id="wrapper" class="container">
           <div class="col-sm-1"></div>
             <div id="left" class="col-sm-2">
-              <div class="well well-sm">
+              <div id="sidebar" class="well well-sm">
+                <a href="/danny-brown">
                     <div  id="panel1" class="panel panel-default">
                             <div class="panel-heading"><h4> Event Notifications </h4></div>
                             <div class="panel-body">SOLD OUT</div>
                     </div>
+                </a>
+                <a href="/gorillaz">
                     <div id="panel2" class="panel panel-default">
                             <div class="panel-body">NOW AVAILABLE</div>
                     </div>
+                </a>
+                <a href="/jeff-dunham">
                     <div id="panel3" class="panel panel-default">
                             <div class="panel-body">COMING SOON</div>
                             
                     </div>
+                </a>
+                <a href="/kanye-west">
                     <div id="panel4" class="panel panel-default">
                             <div class="panel-body">SOLD OUT</div>
                     </div>
+                </a>
+                <a href="/keith-barry">
                     <div id="panel5" class="panel panel-default">
                             <div class="panel-body">SOLD OUT</div>
                     </div>
+                </a>
+                <a href="/michael-mcintyre">
                     <div id="panel6" class="panel panel-default">
                             <div class="panel-body">CANCELLED</div>
                     </div>
+                </a>
                    
                     
                     
@@ -219,9 +231,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 10:13:24 GMT 2017
-                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/index.scala.html
-                  HASH: a38b3aad5386c68d9247fef09f5a173c86863425
+                  DATE: Fri Nov 24 14:05:56 GMT 2017
+                  SOURCE: /home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/index.scala.html
+                  HASH: e26f84ff3dcedbf04dd61972b571284461aa24ae
                   MATRIX: 1030->0
                   LINES: 33->1
                   -- GENERATED --

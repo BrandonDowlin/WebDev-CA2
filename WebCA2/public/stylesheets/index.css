@@ -1,3 +1,4 @@
+/*Brandon did this page*/
 body {
     background-color: #282c39;
     overflow: auto;
@@ -236,9 +237,7 @@ img {
 #contentWell p {
 	padding-bottom: 1em;
 }
-#ContentDanny .well{
-    margin-left: 21%;
-    
+#Content .well{
     background-color: #303030;
     border: .05em solid black;
     color: white;
@@ -259,4 +258,67 @@ img {
     margin-left:4.5%;
     border: .05em solid white;
     width: 80%;
+}
+
+#contentWellTemp img {
+    margin:auto;
+    display:block;
+    height: 15em;
+}
+#contentWellTemp h3 {
+    display:block;
+    margin:auto;
+    text-align: center;
+    padding-top: .5em;
+}
+#contentWellTemp h4 {
+    display:block;
+    margin:auto;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+#contentWellTemp p {
+    display:block;
+    text-align: start;
+    padding-left: 5em;
+    padding-right: 5em;
+    
+}
+#contentWellTemp {
+    overflow: auto;
+}
+#contentWell {
+    overflow: auto;
+}
+.footerabout {
+	margin: 1em;
+	margin-top: 2%;
+	
+}
+.footerabout img{
+	width: 80%;
+	height: 20em;
+	margin-left: 9.15%;
+	border: .05em solid white;
+	border-radius: .5em;
+	margin-bottom: 6%;
+}
+.mainAbout{
+	margin-left:10%;
+	background-color: #303030;
+	color:white;
+	margin-right:12%;
+	border-radius: .5em;
+	
+}
+.mainAbout h1{
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+	margin-top: -.5%;
+	
+}
+.mainAbout h4{
+	font-size: 20px;
 }

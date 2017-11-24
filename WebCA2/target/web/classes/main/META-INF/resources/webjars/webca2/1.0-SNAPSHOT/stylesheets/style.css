@@ -12,9 +12,21 @@ body {
     border: .10em solid black;
     border-radius: 1em;
     padding: 2em;
-    margin-left: 1%;
-    margin-right: -50%;
+    margin-left: 33%;
+    margin-right: -16%;
     color: white;
+}
+.main1{
+    padding-top: 2em;
+    padding-bottom: 5em;
+    background-color: #303030;
+    border: .10em solid black;
+    border-radius: 1em;
+    padding: 2em;
+    width:150%;
+    margin-left: 1%;
+    margin-right: 50%;
+    color: white; 
 }
 
 .footer {
@@ -295,4 +307,27 @@ button {
     margin-left: .5em;
     background-color: #282c39;
     color: white;
+}
+.wellprofile{
+    background-color: black;
+    height: 6em;
+    width: 20em;
+    border: .1em solid white;
+    border-radius: .5em;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 10%;
+    
+}
+.wellprofilelow{
+    background-color: black;
+    height: 6em;
+    width: 15em;
+    border: .1em solid white;
+    border-radius: .5em;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 5.5%;
+    margin-top: 5%;
+
 }

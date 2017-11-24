@@ -9,7 +9,12 @@ GET     /venues                            controllers.HomeController.venues
 GET     /aboutus                           controllers.HomeController.aboutus
 GET     /profile                           controllers.HomeController.profile
 GET     /form                              controllers.HomeController.form
-GET     /danny                             controllers.HomeController.Danny
+GET     /danny-brown                       controllers.HomeController.Danny
+GET     /gorillaz                          controllers.HomeController.Gorillaz
+GET     /jeff-dunham                       controllers.HomeController.Jeff
+GET     /kanye-west                        controllers.HomeController.Kanye
+GET     /keith-barry                       controllers.HomeController.Keith
+GET     /michael-mcintyre                  controllers.HomeController.Michael
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

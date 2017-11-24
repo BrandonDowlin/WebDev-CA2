@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/fuck off/WebDev-CA2/WebCA2/conf/routes
-// @DATE:Fri Nov 24 11:28:55 GMT 2017
+// @SOURCE:/home/wdd/fuck you/WebDev-CA2/WebCA2/conf/routes
+// @DATE:Fri Nov 24 13:17:51 GMT 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -19,6 +19,26 @@ package controllers.javascript {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:13
+    def Gorillaz: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.Gorillaz",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "gorillaz"})
+        }
+      """
+    )
+  
+    // @LINE:15
+    def Kanye: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.Kanye",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "kanye-west"})
+        }
+      """
+    )
   
     // @LINE:10
     def profile: JavaScriptReverseRoute = JavaScriptReverseRoute(
@@ -40,6 +60,26 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:14
+    def Jeff: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.Jeff",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "jeff-dunham"})
+        }
+      """
+    )
+  
+    // @LINE:17
+    def Michael: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.Michael",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "michael-mcintyre"})
+        }
+      """
+    )
+  
     // @LINE:11
     def form: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.form",
@@ -55,7 +95,7 @@ package controllers.javascript {
       "controllers.HomeController.Danny",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "danny"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "danny-brown"})
         }
       """
     )
@@ -90,9 +130,19 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:16
+    def Keith: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.Keith",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "keith-barry"})
+        }
+      """
+    )
+  
   }
 
-  // @LINE:15
+  // @LINE:20
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -100,7 +150,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:15
+    // @LINE:20
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

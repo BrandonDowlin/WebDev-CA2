@@ -34,9 +34,25 @@ Seq[Any](_display_(/*1.2*/temp("Danny Brown")/*1.21*/ {_display_(Seq[Any](format
 
 """),format.raw/*3.1*/("""<div class="containter">
     <div class="col-sm-1"></div>
-    <div id="ContentDanny" class="col-sm-6 col-centered">
+    <div id="Content" class="col-sm-6 col-centered">
         <div id="contentWellTemp" class="well well-sm">
                 <img src="/assets/images/Danny.png" alt=>
+                <h3> Danny Brown </h3>
+                <h4>Performer Genre: Rapper</h4>
+                <p>Daniel Dewan Sewell (born March 16, 1981), better known 
+                    by his stage name Danny Brown, is an American rapper from Detroit, 
+                    Michigan. He is best known for his individuality, being described 
+                    by MTV as "one of rap's most unique figures in recent memory". 
+                    In 2010, after amassing several mixtapes, Brown released his debut 
+                    studio album, The Hybrid. Brown began to gain major recognition 
+                    after the release of his second studio album, XXX, which received 
+                    critical acclaim and earned him such accolades as Spin, as well 
+                    as Metro Times "Artist of the Year".<br> In 2013, he entered a US 
+                    Billboard chart, with the release of his third studio album, Old, 
+                    which reached number 18 on the US Billboard 200 chart and spawned 
+                    three singles, "Dip", "25 Bucks" and "Smokin & Drinkin".<br> His latest 
+                    studio album, Atrocity Exhibition, was released on September 27, 2016.
+                <a href="https://en.wikipedia.org/wiki/Danny_Brown" >Read more...</a></p>
         </div>
     </div>
 </div>
@@ -56,9 +72,9 @@ Seq[Any](_display_(/*1.2*/temp("Danny Brown")/*1.21*/ {_display_(Seq[Any](format
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 11:51:23 GMT 2017
-                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/Danny.scala.html
-                  HASH: efe27dbcfd014d9e25afd31eee1c68b01b3d4600
+                  DATE: Fri Nov 24 12:44:36 GMT 2017
+                  SOURCE: /home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/Danny.scala.html
+                  HASH: 328737eb5562714881d4b8a1816251eabcfe47d9
                   MATRIX: 1030->1|1057->20|1096->22|1124->24
                   LINES: 33->1|33->1|33->1|35->3
                   -- GENERATED --

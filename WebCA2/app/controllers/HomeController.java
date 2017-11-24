@@ -35,5 +35,20 @@ public class HomeController extends Controller {
     public Result Danny() {
         return ok(views.html.Danny.render());
     }
+    public Result Gorillaz() {
+        return ok(views.html.Gorillaz.render());
+    }
+    public Result Jeff() {
+        return ok(views.html.Jeff.render());
+    }
+    public Result Kanye() {
+        return ok(views.html.Kanye.render());
+    }
+    public Result Keith() {
+        return ok(views.html.Keith.render());
+    }
+    public Result Michael() {
+        return ok(views.html.Michael.render());
+    }
 
 }

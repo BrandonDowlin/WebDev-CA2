@@ -55,7 +55,7 @@ Seq[Any](format.raw/*7.32*/("""
                 <div class="navbar-header">
                     <img src ="/assets/images/logo.png">
                 </div>
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav"><li><a href="/"><font color="#d3d3d3"; size="3">Ticket Shark |</font></a></li>
                     <li class="active"><a href="/">Home</a></li>
                     <li><a href="/venues">Venues</a></li>
                     <li><a href="/events">Events</a></li>
@@ -116,10 +116,10 @@ Seq[Any](format.raw/*7.32*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 11:51:23 GMT 2017
-                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/temp.scala.html
-                  HASH: 50e825d61b7d8ee95e2c1845ca0255cb8d84d278
-                  MATRIX: 1206->260|1331->290|1359->292|1439->397|1475->406|1510->414|1536->419|4526->3385|4554->3392|4596->3407
+                  DATE: Fri Nov 24 14:05:56 GMT 2017
+                  SOURCE: /home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/temp.scala.html
+                  HASH: cf9d74b481a796353f8ca8f939830c9374e7b095
+                  MATRIX: 1206->260|1331->290|1359->292|1439->397|1475->406|1510->414|1536->419|4604->3463|4632->3470|4674->3485
                   LINES: 33->7|38->7|40->9|43->12|44->13|44->13|44->13|95->64|95->64|98->67
                   -- GENERATED --
               */

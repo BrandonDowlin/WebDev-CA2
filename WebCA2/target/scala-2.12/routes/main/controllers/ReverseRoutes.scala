@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/fuck off/WebDev-CA2/WebCA2/conf/routes
-// @DATE:Fri Nov 24 11:28:55 GMT 2017
+// @SOURCE:/home/wdd/fuck you/WebDev-CA2/WebCA2/conf/routes
+// @DATE:Fri Nov 24 13:17:51 GMT 2017
 
 import play.api.mvc.Call
 
@@ -19,6 +19,18 @@ package controllers {
     }
 
   
+    // @LINE:13
+    def Gorillaz(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "gorillaz")
+    }
+  
+    // @LINE:15
+    def Kanye(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "kanye-west")
+    }
+  
     // @LINE:10
     def profile(): Call = {
       
@@ -31,6 +43,18 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "venues")
     }
   
+    // @LINE:14
+    def Jeff(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "jeff-dunham")
+    }
+  
+    // @LINE:17
+    def Michael(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "michael-mcintyre")
+    }
+  
     // @LINE:11
     def form(): Call = {
       
@@ -40,7 +64,7 @@ package controllers {
     // @LINE:12
     def Danny(): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "danny")
+      Call("GET", _prefix + { _defaultPrefix } + "danny-brown")
     }
   
     // @LINE:7
@@ -61,16 +85,22 @@ package controllers {
       Call("GET", _prefix)
     }
   
+    // @LINE:16
+    def Keith(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "keith-barry")
+    }
+  
   }
 
-  // @LINE:15
+  // @LINE:20
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:15
+    // @LINE:20
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))

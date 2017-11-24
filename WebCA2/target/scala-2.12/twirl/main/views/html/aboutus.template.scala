@@ -39,38 +39,68 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
         <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" />
         <link data-require="bootstrap@3.3.6" data-semver="3.3.6" rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" />
-        <link rel="stylesheet" href="/assets/stylesheets/style.css" />
+        <link rel="stylesheet" href="/assets/stylesheets/index.css" />
         <script  type="text/javascript" src="/assets/bootstrap/js/bootstrap.js"></script>
     </head>
 
-<body>
-    <title>About us | Contact us</title>
+    <title>About Us</title>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <img src ="/assets/images/logo.png">
+                <img src="../assets/images/logo.png">
             </div>
             <ul class="nav navbar-nav">
+			
+			
+			<li><a href="/"><font color="#d3d3d3"; size="3">Ticket Shark |</font></a></li>
+			
                 <li><a href="/">Home</a></li>
                 <li><a href="/venues">Venues</a></li>
                 <li><a href="/events">Events</a></li>
                 <li class="active"><a href="/aboutus">About us</a></li>
                 <li><a href="/profile">My Profile</a></li>
-                
-</ul></nav>
-<div class="well main">
+			</ul>
 
-</div>
+    </nav>
+	<body>
+		    
+ 
+			<div class="well mainAbout">
+                  <h1> Who we are. </h1>
+                  <h4>In establishing ourselves in such a competitive industry, this is something we have had to ask ourselves frequently. We are an aspiring group of musical hobbylist, businessmen and programmers. An unusual combination for most companies however the irregular team has provided us with a unique ablility to supply and understand our customer's needs all in a way that allows us to grow as a business.</h4>
+                </div>
+            
+            
+    
 
 
+        <div class="well mainAbout">
+                  <h1> What we do. </h1>
+                  <h4>Currently we provide a service similar to many others, we sell tickets to concerts and other live events. In the future, we aim to branch out into other areas and host new types of events that will accommodate more opportunities more opportunities for people to meet their favourite celebrities. We also anticipate funding a program for sponsoring local talent and hosting new unsigned bands to smaller events.</h4>
+                </div>
+            
+           
+       
+		
+	
+            
+     
+				<div class="well mainAbout">
+                  <h1>Where are we?</h1>
+                  <h4>Our main branch is located in Bogtown, Clonygowan, Tullamore, Co.Offally, Ireland. </h4>
 
+                </div>
 
-
-
-
-<div class="footer">
-    <img src="/assets/images/Concert.jpg">
-    </img></div>
+                <div class="well mainAbout">
+                    <h1>Contact us</h1>
+                    <h4>If you have any questions please contact us by Email: theTicketShark@gmail.com  or by phone at 0858358380</h4>
+                </div>
+				
+				<div class="footerabout">
+		<img src="assets/images/Concert.jpg">
+		</img></div>
+           
+        
 </body>
 </html>"""))
       }
@@ -88,9 +118,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 10:14:49 GMT 2017
-                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/aboutus.scala.html
-                  HASH: 87e00581fab979158c9ba4a86af48a12823b34f4
+                  DATE: Fri Nov 24 14:05:56 GMT 2017
+                  SOURCE: /home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/aboutus.scala.html
+                  HASH: 1ce5844b13b6ef5e8795577b73e343a2e83ba2a5
                   MATRIX: 1032->0
                   LINES: 33->1
                   -- GENERATED --

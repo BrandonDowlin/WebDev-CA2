@@ -50,7 +50,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
             <div class="navbar-header">
                 <img src ="/assets/images/logo.png">
             </div>
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav"><li><a href="/"><font color="#d3d3d3"; size="3">Ticket Shark |</font></a></li>
                 <li><a href="/">Home</a></li>
                 <li><a href="/venues">Venues</a></li>
                 <li><a href="/events">Events</a></li>
@@ -109,9 +109,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 10:14:49 GMT 2017
-                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/form.scala.html
-                  HASH: 194e8097b7f0832a8358c84d5a1ef9a7d96cf868
+                  DATE: Fri Nov 24 14:05:56 GMT 2017
+                  SOURCE: /home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/form.scala.html
+                  HASH: aca6246435e41d1f777b7e74301c088a64c5eaa0
                   MATRIX: 1029->0
                   LINES: 33->1
                   -- GENERATED --
