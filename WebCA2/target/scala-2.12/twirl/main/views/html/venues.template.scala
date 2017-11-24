@@ -56,31 +56,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                 <li><a href="/events">Events</a></li>
                 <li><a href="/aboutus">About us</a></li>
 				<li><a href="/profile">My Profile</a></li>
-                <li class="dropdown">
-                    <a href="events.html" class="login-a" data-toggle="dropdown"> <b>Sign in</b> <span class="caret"></span> </a>
-                      <ul id="login" class="dropdown-menu">
-                          <li>
-                               <div class="row">
-                                      <div class="col-md-12">
-                              
-                                          <p></p>
-                                          
-                                           <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                                  <div class="form-group">
-                                                       <label class="email">Email address</label>
-                                                       <input type="email" class="form-control" placeholder="Email address" required>
-                                                  </div>
-                                                  <div class="form-group">
-                                                       <label class="password">Password</label>
-                                                       <input type="password" class="form-control" placeholder="Password" required>
-                                                  <p></p>
-                                                  <div class="form-group">
-                                                       <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                                                  </div>
-                                                  
-                      
-                      </ul>
-                      </li>
+                
     </nav>
 
     <div class="container">
@@ -264,30 +240,30 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         </div>
         
         <div class="footer">
-            <img src="/assets/images/concert.jpg">
+            <img src="/assets/images/Concert.jpg">
             </img></div>
 
 </body>
 
 <script>
-    function myFunction() """),format.raw/*241.27*/("""{"""),format.raw/*241.28*/("""
-        """),format.raw/*242.9*/("""var input, filter, table, tr, td, i;
+    function myFunction() """),format.raw/*217.27*/("""{"""),format.raw/*217.28*/("""
+        """),format.raw/*218.9*/("""var input, filter, table, tr, td, i;
         input = document.getElementById("myInput");
         filter = input.value.toUpperCase();
         table = document.getElementById("myTable");
         tr = table.getElementsByTagName("tr");
-        for (i = 0; i < tr.length; i++) """),format.raw/*247.41*/("""{"""),format.raw/*247.42*/("""
-            """),format.raw/*248.13*/("""td = tr[i].getElementsByTagName("td")[1];
-            if (td) """),format.raw/*249.21*/("""{"""),format.raw/*249.22*/("""
-                """),format.raw/*250.17*/("""if (td.innerHTML.toUpperCase().indexOf(filter) > -1) """),format.raw/*250.70*/("""{"""),format.raw/*250.71*/("""
-                    """),format.raw/*251.21*/("""tr[i].style.display = "";
-                """),format.raw/*252.17*/("""}"""),format.raw/*252.18*/(""" """),format.raw/*252.19*/("""else """),format.raw/*252.24*/("""{"""),format.raw/*252.25*/("""
-                    """),format.raw/*253.21*/("""tr[i].style.display = "none";
-                """),format.raw/*254.17*/("""}"""),format.raw/*254.18*/("""
-            """),format.raw/*255.13*/("""}"""),format.raw/*255.14*/("""
-        """),format.raw/*256.9*/("""}"""),format.raw/*256.10*/("""
-    """),format.raw/*257.5*/("""}"""),format.raw/*257.6*/("""
-"""),format.raw/*258.1*/("""</script>
+        for (i = 0; i < tr.length; i++) """),format.raw/*223.41*/("""{"""),format.raw/*223.42*/("""
+            """),format.raw/*224.13*/("""td = tr[i].getElementsByTagName("td")[1];
+            if (td) """),format.raw/*225.21*/("""{"""),format.raw/*225.22*/("""
+                """),format.raw/*226.17*/("""if (td.innerHTML.toUpperCase().indexOf(filter) > -1) """),format.raw/*226.70*/("""{"""),format.raw/*226.71*/("""
+                    """),format.raw/*227.21*/("""tr[i].style.display = "";
+                """),format.raw/*228.17*/("""}"""),format.raw/*228.18*/(""" """),format.raw/*228.19*/("""else """),format.raw/*228.24*/("""{"""),format.raw/*228.25*/("""
+                    """),format.raw/*229.21*/("""tr[i].style.display = "none";
+                """),format.raw/*230.17*/("""}"""),format.raw/*230.18*/("""
+            """),format.raw/*231.13*/("""}"""),format.raw/*231.14*/("""
+        """),format.raw/*232.9*/("""}"""),format.raw/*232.10*/("""
+    """),format.raw/*233.5*/("""}"""),format.raw/*233.6*/("""
+"""),format.raw/*234.1*/("""</script>
 
 </html>"""))
       }
@@ -305,11 +281,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Thu Nov 23 23:12:13 GMT 2017
-                  SOURCE: C:/Users/brand/Documents/WebDev-CA2-master/WebCA2 Play/app/views/venues.scala.html
-                  HASH: 34d82de2d4c9c72d0e557ebc21c399ece532881f
-                  MATRIX: 1031->0|14130->13073|14160->13074|14197->13083|14498->13355|14528->13356|14570->13369|14661->13431|14691->13432|14737->13449|14819->13502|14849->13503|14899->13524|14970->13566|15000->13567|15030->13568|15064->13573|15094->13574|15144->13595|15219->13641|15249->13642|15291->13655|15321->13656|15358->13665|15388->13666|15421->13671|15450->13672|15479->13673
-                  LINES: 33->1|273->241|273->241|274->242|279->247|279->247|280->248|281->249|281->249|282->250|282->250|282->250|283->251|284->252|284->252|284->252|284->252|284->252|285->253|286->254|286->254|287->255|287->255|288->256|288->256|289->257|289->257|290->258
+                  DATE: Fri Nov 24 10:14:49 GMT 2017
+                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/venues.scala.html
+                  HASH: 46fe04465cea1364f8b366a62dd1c2f4a879a031
+                  MATRIX: 1031->0|12396->11339|12426->11340|12463->11349|12764->11621|12794->11622|12836->11635|12927->11697|12957->11698|13003->11715|13085->11768|13115->11769|13165->11790|13236->11832|13266->11833|13296->11834|13330->11839|13360->11840|13410->11861|13485->11907|13515->11908|13557->11921|13587->11922|13624->11931|13654->11932|13687->11937|13716->11938|13745->11939
+                  LINES: 33->1|249->217|249->217|250->218|255->223|255->223|256->224|257->225|257->225|258->226|258->226|258->226|259->227|260->228|260->228|260->228|260->228|260->228|261->229|262->230|262->230|263->231|263->231|264->232|264->232|265->233|265->233|266->234
                   -- GENERATED --
               */
           

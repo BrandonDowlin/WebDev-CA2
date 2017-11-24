@@ -32,5 +32,8 @@ public class HomeController extends Controller {
     public Result aboutus() {
         return ok(views.html.aboutus.render());
     }
+    public Result Danny() {
+        return ok(views.html.Danny.render());
+    }
 
 }

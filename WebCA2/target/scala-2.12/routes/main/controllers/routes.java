@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/brand/Documents/WebDev-CA2-master/WebCA2 Play/conf/routes
-// @DATE:Thu Nov 23 21:44:34 GMT 2017
+// @SOURCE:/home/wdd/fuck off/WebDev-CA2/WebCA2/conf/routes
+// @DATE:Fri Nov 24 11:28:55 GMT 2017
 
 package controllers;
 

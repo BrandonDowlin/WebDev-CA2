@@ -138,15 +138,15 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img src="/assets/images/1.png" alt=>
+                                <img src="/assets/images/1.PNG" alt=>
                             </div>
 
                             <div class="item">
-                                <img src="/assets/images/2.png" alt=>
+                                <img src="/assets/images/2.PNG" alt=>
                             </div>
 
                             <div class="item">
-                                <img src="/assets/images/3.png" alt=>
+                                <img src="/assets/images/3.PNG" alt=>
                             </div>
                         </div>
 
@@ -198,7 +198,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
         </div>
 		<div class="footer">
-		<img src="/assets/images/concert.jpg">
+		<img src="/assets/images/Concert.jpg">
 		</img></div>
 
 </body>
@@ -219,9 +219,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Thu Nov 23 23:13:31 GMT 2017
-                  SOURCE: C:/Users/brand/Documents/WebDev-CA2-master/WebCA2 Play/app/views/index.scala.html
-                  HASH: f4b3e88aaf517bb6ea2d3590f7063ed9d65c2a71
+                  DATE: Fri Nov 24 10:13:24 GMT 2017
+                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/index.scala.html
+                  HASH: a38b3aad5386c68d9247fef09f5a173c86863425
                   MATRIX: 1030->0
                   LINES: 33->1
                   -- GENERATED --

@@ -1,0 +1,71 @@
+@*
+ * This template is called from the `index` template. This template
+ * handles the rendering of the page header and body tags. It takes
+ * two arguments, a `String` for the title of the page and an `Html`
+ * object to insert into the body of the page.
+ *@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @* Here's where we render the page title `String`. *@
+        <title>@title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script data-require="jquery@@3.0.0" data-semver="3.0.0" src="/assets/javascripts/jquery.js"></script>
+        <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+        <link data-require="bootstrap-css@@3.3.6" data-semver="3.3.6" rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" />
+        <link data-require="bootstrap@@3.3.6" data-semver="3.3.6" rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="/assets/stylesheets/index.css" />
+        <script  type="text/javascript" src="/assets/bootstrap/js/bootstrap.js"></script>
+    </head>
+    <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <img src ="/assets/images/logo.png">
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/venues">Venues</a></li>
+                    <li><a href="/events">Events</a></li>
+                    <li><a href="/aboutus">About us</a></li>
+                    <li><a href="/profile">My Profile</a></li>
+                    
+                    <li class="dropdown">
+              <a href="/events" class="login-a" data-toggle="dropdown"> <b>Sign in</b> <span class="caret"></span> </a>
+                <ul id="login" class="dropdown-menu">
+                    <li>
+                         <div class="row">
+                                <div class="col-md-12">
+                        
+                                    <p></p>
+                                    
+                                     <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                            <div class="form-group">
+                                                 <label class="email">Email address</label>
+                                                 <input type="email" class="form-control" placeholder="Email address" required>
+                                            </div>
+                                            <div class="form-group">
+                                                 <label class="password">Password</label>
+                                                 <input type="password" class="form-control" placeholder="Password" required>
+                                            <p></p>
+                                            <div class="form-group">
+                                                 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                            </div>
+                                            
+                
+                </ul>
+                </li>
+    
+                </ul>
+            </div>
+        </nav>
+    <body>
+        @content
+
+        
+    </body>
+    <div class="footerTemp">
+		<img src="/assets/images/Concert.jpg">
+		</img></div>
+</html>

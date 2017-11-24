@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/brand/Documents/WebDev-CA2-master/WebCA2 Play/conf/routes
-// @DATE:Thu Nov 23 21:44:34 GMT 2017
+// @SOURCE:/home/wdd/fuck off/WebDev-CA2/WebCA2/conf/routes
+// @DATE:Fri Nov 24 11:28:55 GMT 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -50,6 +50,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:12
+    def Danny: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.Danny",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "danny"})
+        }
+      """
+    )
+  
     // @LINE:7
     def events: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.events",
@@ -82,7 +92,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:14
+  // @LINE:15
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -90,7 +100,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:14
+    // @LINE:15
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

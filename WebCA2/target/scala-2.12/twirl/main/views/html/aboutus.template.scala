@@ -56,31 +56,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                 <li><a href="/events">Events</a></li>
                 <li class="active"><a href="/aboutus">About us</a></li>
                 <li><a href="/profile">My Profile</a></li>
-                <li class="dropdown">
-                    <a href="events.html" class="login-a" data-toggle="dropdown"> <b>Sign in</b> <span class="caret"></span> </a>
-                      <ul id="login" class="dropdown-menu">
-                          <li>
-                               <div class="row">
-                                      <div class="col-md-12">
-                              
-                                          <p></p>
-                                          
-                                           <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                                  <div class="form-group">
-                                                       <label class="email">Email address</label>
-                                                       <input type="email" class="form-control" placeholder="Email address" required>
-                                                  </div>
-                                                  <div class="form-group">
-                                                       <label class="password">Password</label>
-                                                       <input type="password" class="form-control" placeholder="Password" required>
-                                                  <p></p>
-                                                  <div class="form-group">
-                                                       <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                                                  </div>
-                                                  
-                      
-                      </ul>
-                      </li>
+                
 </ul></nav>
 <div class="well main">
 
@@ -93,7 +69,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
 
 <div class="footer">
-    <img src="/assets/images/concert.jpg">
+    <img src="/assets/images/Concert.jpg">
     </img></div>
 </body>
 </html>"""))
@@ -112,9 +88,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Thu Nov 23 23:12:13 GMT 2017
-                  SOURCE: C:/Users/brand/Documents/WebDev-CA2-master/WebCA2 Play/app/views/aboutus.scala.html
-                  HASH: 01483cdf2d18b251e51547365985124b1140a949
+                  DATE: Fri Nov 24 10:14:49 GMT 2017
+                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/aboutus.scala.html
+                  HASH: 87e00581fab979158c9ba4a86af48a12823b34f4
                   MATRIX: 1032->0
                   LINES: 33->1
                   -- GENERATED --
