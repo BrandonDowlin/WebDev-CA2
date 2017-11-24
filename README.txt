@@ -8,4 +8,4 @@ Brandon is on a different github account because his
 x00130274 account was flagged and couldnt be added 
 to the repository otherwise.
 
-We tried to join the slack and the link was not longer available... The only problems encountered were recently so we were going to help out until we couldn't
+Our dynamic content is for the index page, when you click on an image on the left(panel) it auto generates a template page while filling in all the relevant information associated with the clicked image(variables).
