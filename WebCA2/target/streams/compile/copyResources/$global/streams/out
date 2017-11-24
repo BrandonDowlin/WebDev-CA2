@@ -1,4 +1,4 @@
 [0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/wdd/fuck off/WebDev-CA2/WebCA2/conf/application.conf,/home/wdd/fuck off/WebDev-CA2/WebCA2/target/scala-2.12/classes/application.conf)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/wdd/fuck off/WebDev-CA2/WebCA2/conf/logback.xml,/home/wdd/fuck off/WebDev-CA2/WebCA2/target/scala-2.12/classes/logback.xml)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/wdd/fuck off/WebDev-CA2/WebCA2/conf/routes,/home/wdd/fuck off/WebDev-CA2/WebCA2/target/scala-2.12/classes/routes)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/conf/logback.xml,/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/target/scala-2.12/classes/logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/conf/routes,/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/target/scala-2.12/classes/routes)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/conf/application.conf,/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/target/scala-2.12/classes/application.conf)[0m

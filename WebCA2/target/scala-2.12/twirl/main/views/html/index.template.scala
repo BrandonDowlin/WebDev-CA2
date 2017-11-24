@@ -189,20 +189,20 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                         <h1> -- Event News -- </h1>
                         <h4>Finn Wolfhard's (aka Mike from Stranger Things) band have signed a record deal</h4>
                         <img src="/assets/images/News1.jpg"><p>As you may know, since making it big as an actor with his role on Stranger Things,
- 						Finn Wolfhard has also shown<br> the world that he's no one-trick-pony when it comes to
-						entertainment. Speaking to NME about their deal with<br> Royal Mountain Records - and 
-						their imminent EP release, recorded with the frontman of Chicagoan indie<br> band 
+ 						Finn Wolfhard has also shown the world that he's no one-trick-pony when it comes to
+						entertainment. Speaking to NME about their deal with Royal Mountain Records - and 
+						their imminent EP release, recorded with the frontman of Chicagoan indie band 
 						Twin Peaks - Wolfhard said: "It is so sweet that we have such a good team at 
-						Royal Mountain Records. <br>I love everyone on it". <a href="http://entertainment.ie/music/news/Finn-Wolfhards-aka-Mike-from-Stranger-Things-band-have-signed-a-record-deal/399552.htm" target="_blank">Read more...</a></p><br>
-                        <h4><br>Linkin Park paid emotional tribute to Chester Bennington at the AMAs last night </h4>
+						Royal Mountain Records. I love everyone on it". <a href="http://entertainment.ie/music/news/Finn-Wolfhards-aka-Mike-from-Stranger-Things-band-have-signed-a-record-deal/399552.htm" target="_blank">Read more...</a></p><br>
+                        <h4>Linkin Park paid emotional tribute to Chester Bennington at the AMAs last night </h4>
                         <img src="/assets/images/News2.jpg"><p>Linkin Park were the winners of 'Favourite Alternative Rock Artist' award at the 
-						American Music Awards last night,<br> and the band took the opportunity to pay tribute 
-						to their late frontman in an emotional speech. They dedicated the<br> award to Bennington, 
+						American Music Awards last night, and the band took the opportunity to pay tribute 
+						to their late frontman in an emotional speech. They dedicated the award to Bennington, 
 						saying: "We want to dedicate this award to him - to his memory, to his talent, to his 
-						sense <br>of humour, to his joy. “Remember, you guys — all of you, tonight; whether you’re 
-						a fan or an artist, I want you <br>guys to take a moment to appreciate what you’ve got and 
+						sense of humour, to his joy. “Remember, you guys — all of you, tonight; whether you’re 
+						a fan or an artist, I want you guys to take a moment to appreciate what you’ve got and 
 						make Chester proud." <a href="http://entertainment.ie/music/news/Watch-Linkin-Park-paid-emotional-tribute-to-Chester-Bennington-at-the-AMAs-last-night/399405.htm" target="_blank">Read more...</a></p><br>
-						<br>
+						
 						
 						
                       
@@ -233,9 +233,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 15:01:17 GMT 2017
-                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/index.scala.html
-                  HASH: 721fcab7cae64180c58f1b84ca102c42fe2cff42
+                  DATE: Fri Nov 24 18:39:33 GMT 2017
+                  SOURCE: /home/brandon/Yanika-Web/WebDev-CA2/WebCA2/app/views/index.scala.html
+                  HASH: 2802139e4aed3a9cb10fdda37144d971749401e3
                   MATRIX: 1030->0
                   LINES: 33->1
                   -- GENERATED --
