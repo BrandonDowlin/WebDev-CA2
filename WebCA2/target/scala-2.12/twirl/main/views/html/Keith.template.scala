@@ -33,8 +33,8 @@ object Keith extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 Seq[Any](_display_(/*1.2*/temp("Keith Barry")/*1.21*/ {_display_(Seq[Any](format.raw/*1.23*/("""
     
     """),format.raw/*3.5*/("""<div class="containter">
-        <div class="col-sm-1"></div>
-        <div id="Content" class="col-sm-6 col-centered">
+        <div class="col-sm-2"></div>
+        <div id="Content" class="col-sm-5 col-centered">
             <div id="contentWellTemp" class="well well-sm">
                     <img src="/assets/images/Keith.png" alt=>
                     <h3> Keith Barry </h3>
@@ -93,9 +93,9 @@ Seq[Any](_display_(/*1.2*/temp("Keith Barry")/*1.21*/ {_display_(Seq[Any](format
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 13:11:23 GMT 2017
-                  SOURCE: /home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/Keith.scala.html
-                  HASH: a44ac486f6c0b7796d2c533a9f98c067ed012e8f
+                  DATE: Fri Nov 24 15:16:00 GMT 2017
+                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/Keith.scala.html
+                  HASH: b1b5ba8a248ce58a3eb5eba695f157182140796c
                   MATRIX: 1030->1|1057->20|1096->22|1132->32
                   LINES: 33->1|33->1|33->1|35->3
                   -- GENERATED --

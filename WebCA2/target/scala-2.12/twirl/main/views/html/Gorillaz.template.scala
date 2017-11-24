@@ -33,8 +33,8 @@ object Gorillaz extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.H
 Seq[Any](_display_(/*1.2*/temp("Gorillaz")/*1.18*/ {_display_(Seq[Any](format.raw/*1.20*/("""
     
     """),format.raw/*3.5*/("""<div class="containter">
-        <div class="col-sm-1"></div>
-        <div id="Content" class="col-sm-6 col-centered">
+        <div class="col-sm-2"></div>
+        <div id="Content" class="col-sm-5 col-centered">
             <div id="contentWellTemp" class="well well-sm">
                     <img src="/assets/images/Gorillaz.png" alt=>
                     <h3> Gorillaz </h3>
@@ -70,9 +70,9 @@ Seq[Any](_display_(/*1.2*/temp("Gorillaz")/*1.18*/ {_display_(Seq[Any](format.ra
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 12:48:24 GMT 2017
-                  SOURCE: /home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/Gorillaz.scala.html
-                  HASH: 781b2d516072efa647352a906359df9ee35d8885
+                  DATE: Fri Nov 24 15:16:00 GMT 2017
+                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/Gorillaz.scala.html
+                  HASH: c1c01735b21dcf55014569c1ca2bcc95337528c1
                   MATRIX: 1033->1|1057->17|1096->19|1132->29
                   LINES: 33->1|33->1|33->1|35->3
                   -- GENERATED --

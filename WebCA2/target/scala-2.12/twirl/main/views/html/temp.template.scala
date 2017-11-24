@@ -36,8 +36,8 @@ object temp extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlF
 
 
 Seq[Any](format.raw/*7.32*/("""
-
-"""),format.raw/*9.1*/("""<!DOCTYPE html>
+"""),format.raw/*8.1*/("""<!--Brandon did this page-->
+<!DOCTYPE html>
 <html lang="en">
     <head>
         """),format.raw/*12.62*/("""
@@ -116,11 +116,11 @@ Seq[Any](format.raw/*7.32*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 14:05:56 GMT 2017
-                  SOURCE: /home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/temp.scala.html
-                  HASH: cf9d74b481a796353f8ca8f939830c9374e7b095
-                  MATRIX: 1206->260|1331->290|1359->292|1439->397|1475->406|1510->414|1536->419|4604->3463|4632->3470|4674->3485
-                  LINES: 33->7|38->7|40->9|43->12|44->13|44->13|44->13|95->64|95->64|98->67
+                  DATE: Fri Nov 24 15:01:17 GMT 2017
+                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/temp.scala.html
+                  HASH: 487a839e725d7936382098fa3e4419bf50bff725
+                  MATRIX: 1206->260|1331->290|1358->291|1467->425|1503->434|1538->442|1564->447|4632->3491|4660->3498|4702->3513
+                  LINES: 33->7|38->7|39->8|43->12|44->13|44->13|44->13|95->64|95->64|98->67
                   -- GENERATED --
               */
           

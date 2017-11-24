@@ -42,7 +42,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <link rel="stylesheet" href="/assets/stylesheets/index.css" />
         <script  type="text/javascript" src="/assets/bootstrap/js/bootstrap.js"></script>
     </head>
-
+<!--Nathan did this page-->
     <title>About Us</title>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -118,9 +118,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 14:05:56 GMT 2017
-                  SOURCE: /home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/aboutus.scala.html
-                  HASH: 1ce5844b13b6ef5e8795577b73e343a2e83ba2a5
+                  DATE: Fri Nov 24 15:01:17 GMT 2017
+                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/aboutus.scala.html
+                  HASH: 5f7fde15a49044f7b1b7e630845d0781fc289ef9
                   MATRIX: 1032->0
                   LINES: 33->1
                   -- GENERATED --

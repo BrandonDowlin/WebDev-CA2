@@ -44,6 +44,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
     </head>
 
 <body>
+    <!--Ronan did this page-->
     <title>Events</title>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -61,7 +62,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
     <div class="container">
 
-        <!-- first row in middle section -->
+  
         <div class="row">
             <div class="col-sm-8">
                 <div class="well main">
@@ -267,24 +268,24 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 </body>
 
 <script>
-    function myFunction() """),format.raw/*238.27*/("""{"""),format.raw/*238.28*/("""
-        """),format.raw/*239.9*/("""var input, filter, table, tr, td, i;
+    function myFunction() """),format.raw/*239.27*/("""{"""),format.raw/*239.28*/("""
+        """),format.raw/*240.9*/("""var input, filter, table, tr, td, i;
         input = document.getElementById("myInput");
         filter = input.value.toUpperCase();
         table = document.getElementById("myTable");
         tr = table.getElementsByTagName("tr");
-        for (i = 0; i < tr.length; i++) """),format.raw/*244.41*/("""{"""),format.raw/*244.42*/("""
-            """),format.raw/*245.13*/("""td = tr[i].getElementsByTagName("td")[1];
-            if (td) """),format.raw/*246.21*/("""{"""),format.raw/*246.22*/("""
-                """),format.raw/*247.17*/("""if (td.innerHTML.toUpperCase().indexOf(filter) > -1) """),format.raw/*247.70*/("""{"""),format.raw/*247.71*/("""
-                    """),format.raw/*248.21*/("""tr[i].style.display = "";
-                """),format.raw/*249.17*/("""}"""),format.raw/*249.18*/(""" """),format.raw/*249.19*/("""else """),format.raw/*249.24*/("""{"""),format.raw/*249.25*/("""
-                    """),format.raw/*250.21*/("""tr[i].style.display = "none";
-                """),format.raw/*251.17*/("""}"""),format.raw/*251.18*/("""
-            """),format.raw/*252.13*/("""}"""),format.raw/*252.14*/("""
-        """),format.raw/*253.9*/("""}"""),format.raw/*253.10*/("""
-    """),format.raw/*254.5*/("""}"""),format.raw/*254.6*/("""
-"""),format.raw/*255.1*/("""</script>
+        for (i = 0; i < tr.length; i++) """),format.raw/*245.41*/("""{"""),format.raw/*245.42*/("""
+            """),format.raw/*246.13*/("""td = tr[i].getElementsByTagName("td")[1];
+            if (td) """),format.raw/*247.21*/("""{"""),format.raw/*247.22*/("""
+                """),format.raw/*248.17*/("""if (td.innerHTML.toUpperCase().indexOf(filter) > -1) """),format.raw/*248.70*/("""{"""),format.raw/*248.71*/("""
+                    """),format.raw/*249.21*/("""tr[i].style.display = "";
+                """),format.raw/*250.17*/("""}"""),format.raw/*250.18*/(""" """),format.raw/*250.19*/("""else """),format.raw/*250.24*/("""{"""),format.raw/*250.25*/("""
+                    """),format.raw/*251.21*/("""tr[i].style.display = "none";
+                """),format.raw/*252.17*/("""}"""),format.raw/*252.18*/("""
+            """),format.raw/*253.13*/("""}"""),format.raw/*253.14*/("""
+        """),format.raw/*254.9*/("""}"""),format.raw/*254.10*/("""
+    """),format.raw/*255.5*/("""}"""),format.raw/*255.6*/("""
+"""),format.raw/*256.1*/("""</script>
 
 </html>"""))
       }
@@ -302,11 +303,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 14:05:56 GMT 2017
-                  SOURCE: /home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/events.scala.html
-                  HASH: 63b9fd6bfaa381eccd5283e8274d736feb2683a1
-                  MATRIX: 1031->0|12472->11415|12502->11416|12539->11425|12840->11697|12870->11698|12912->11711|13003->11773|13033->11774|13079->11791|13161->11844|13191->11845|13241->11866|13312->11908|13342->11909|13372->11910|13406->11915|13436->11916|13486->11937|13561->11983|13591->11984|13633->11997|13663->11998|13700->12007|13730->12008|13763->12013|13792->12014|13821->12015
-                  LINES: 33->1|270->238|270->238|271->239|276->244|276->244|277->245|278->246|278->246|279->247|279->247|279->247|280->248|281->249|281->249|281->249|281->249|281->249|282->250|283->251|283->251|284->252|284->252|285->253|285->253|286->254|286->254|287->255
+                  DATE: Fri Nov 24 15:01:17 GMT 2017
+                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/events.scala.html
+                  HASH: 9a9d6d2ece02ce639ba6b1aa40cd915c9d37f716
+                  MATRIX: 1031->0|12461->11404|12491->11405|12528->11414|12829->11686|12859->11687|12901->11700|12992->11762|13022->11763|13068->11780|13150->11833|13180->11834|13230->11855|13301->11897|13331->11898|13361->11899|13395->11904|13425->11905|13475->11926|13550->11972|13580->11973|13622->11986|13652->11987|13689->11996|13719->11997|13752->12002|13781->12003|13810->12004
+                  LINES: 33->1|271->239|271->239|272->240|277->245|277->245|278->246|279->247|279->247|280->248|280->248|280->248|281->249|282->250|282->250|282->250|282->250|282->250|283->251|284->252|284->252|285->253|285->253|286->254|286->254|287->255|287->255|288->256
                   -- GENERATED --
               */
           

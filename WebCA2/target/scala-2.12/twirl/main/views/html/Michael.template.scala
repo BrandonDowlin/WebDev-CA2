@@ -33,8 +33,8 @@ object Michael extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Ht
 Seq[Any](_display_(/*1.2*/temp("Michael McIntyre")/*1.26*/ {_display_(Seq[Any](format.raw/*1.28*/("""
     
     """),format.raw/*3.5*/("""<div class="containter">
-        <div class="col-sm-1"></div>
-        <div id="Content" class="col-sm-6 col-centered">
+        <div class="col-sm-2"></div>
+        <div id="Content" class="col-sm-5 col-centered">
             <div id="contentWellTemp" class="well well-sm">
                     <img src="/assets/images/Michael.png" alt=>
                     <h3> Michael McIntyre </h3>
@@ -96,9 +96,9 @@ Seq[Any](_display_(/*1.2*/temp("Michael McIntyre")/*1.26*/ {_display_(Seq[Any](f
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 13:17:51 GMT 2017
-                  SOURCE: /home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/Michael.scala.html
-                  HASH: d906da24a0250944a2897e51b2ae933dc6a67f18
+                  DATE: Fri Nov 24 15:16:00 GMT 2017
+                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/Michael.scala.html
+                  HASH: 4daa96cb7e94174ff6e23fda96a4e3036ff85e16
                   MATRIX: 1032->1|1064->25|1103->27|1139->37
                   LINES: 33->1|33->1|33->1|35->3
                   -- GENERATED --

@@ -33,8 +33,8 @@ object Kanye extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 Seq[Any](_display_(/*1.2*/temp("Kanye West")/*1.20*/ {_display_(Seq[Any](format.raw/*1.22*/("""
     
     """),format.raw/*3.5*/("""<div class="containter">
-        <div class="col-sm-1"></div>
-        <div id="Content" class="col-sm-6 col-centered">
+        <div class="col-sm-2"></div>
+        <div id="Content" class="col-sm-5 col-centered">
             <div id="contentWellTemp" class="well well-sm">
                     <img src="/assets/images/Kanye.png" alt=>
                     <h3> Kanye West </h3>
@@ -96,9 +96,9 @@ Seq[Any](_display_(/*1.2*/temp("Kanye West")/*1.20*/ {_display_(Seq[Any](format.
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 13:06:15 GMT 2017
-                  SOURCE: /home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/Kanye.scala.html
-                  HASH: 136333e9c968145b8a4923f9258fd2ee8a326452
+                  DATE: Fri Nov 24 15:16:00 GMT 2017
+                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/Kanye.scala.html
+                  HASH: 46f6d0cb533147b2556febe0cb6f4aa02f714a97
                   MATRIX: 1030->1|1056->19|1095->21|1131->31
                   LINES: 33->1|33->1|33->1|35->3
                   -- GENERATED --

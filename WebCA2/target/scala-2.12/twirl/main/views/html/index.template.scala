@@ -44,6 +44,8 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 </head>
 
 <body>
+    <!--Brandon did this page-->
+    <!--The sign in was working in html NotePad++ but not here, We're not sure what the error is, we asked on slack-->
 <title>Home</title>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -231,9 +233,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 14:05:56 GMT 2017
-                  SOURCE: /home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/index.scala.html
-                  HASH: e26f84ff3dcedbf04dd61972b571284461aa24ae
+                  DATE: Fri Nov 24 15:01:17 GMT 2017
+                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/index.scala.html
+                  HASH: 721fcab7cae64180c58f1b84ca102c42fe2cff42
                   MATRIX: 1030->0
                   LINES: 33->1
                   -- GENERATED --

@@ -33,8 +33,8 @@ object Danny extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 Seq[Any](_display_(/*1.2*/temp("Danny Brown")/*1.21*/ {_display_(Seq[Any](format.raw/*1.23*/("""
 
 """),format.raw/*3.1*/("""<div class="containter">
-    <div class="col-sm-1"></div>
-    <div id="Content" class="col-sm-6 col-centered">
+    <div class="col-sm-2"></div>
+    <div id="Content" class="col-sm-5 col-centered">
         <div id="contentWellTemp" class="well well-sm">
                 <img src="/assets/images/Danny.png" alt=>
                 <h3> Danny Brown </h3>
@@ -72,9 +72,9 @@ Seq[Any](_display_(/*1.2*/temp("Danny Brown")/*1.21*/ {_display_(Seq[Any](format
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 12:44:36 GMT 2017
-                  SOURCE: /home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/Danny.scala.html
-                  HASH: 328737eb5562714881d4b8a1816251eabcfe47d9
+                  DATE: Fri Nov 24 15:15:36 GMT 2017
+                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/Danny.scala.html
+                  HASH: 1f42e4570f92a32da8a678002f20e12015cf6182
                   MATRIX: 1030->1|1057->20|1096->22|1124->24
                   LINES: 33->1|33->1|33->1|35->3
                   -- GENERATED --

@@ -44,6 +44,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
     </head>
 
 <body>
+    <!--Ronan did this page-->
     <title>Profile Information</title>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -109,9 +110,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 14:05:56 GMT 2017
-                  SOURCE: /home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/form.scala.html
-                  HASH: aca6246435e41d1f777b7e74301c088a64c5eaa0
+                  DATE: Fri Nov 24 15:01:17 GMT 2017
+                  SOURCE: /home/wdd/fuck off/WebDev-CA2/WebCA2/app/views/form.scala.html
+                  HASH: 441a452c6abf5febbb0058c13edf9265d2113b9c
                   MATRIX: 1029->0
                   LINES: 33->1
                   -- GENERATED --

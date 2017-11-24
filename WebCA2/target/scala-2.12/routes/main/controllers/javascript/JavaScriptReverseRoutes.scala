@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/fuck you/WebDev-CA2/WebCA2/conf/routes
-// @DATE:Fri Nov 24 13:17:51 GMT 2017
+// @SOURCE:/home/wdd/fuck off/WebDev-CA2/WebCA2/conf/routes
+// @DATE:Fri Nov 24 15:01:17 GMT 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
