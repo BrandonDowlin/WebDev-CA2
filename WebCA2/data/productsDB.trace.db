@@ -1,0 +1,12 @@
+2017-12-11 14:37:31 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "PLAY_EVOLUTIONS" not found; SQL statement:
+select id, hash, apply_script, revert_script, state, last_problem from play_evolutions where state like 'applying_%' [42102-193]
+2017-12-11 15:06:07 jdbc[73]: exception
+org.h2.jdbc.JdbcSQLException: Table "VENUES" not found; SQL statement:
+insert into venues (id,name,country,city,capacity) values ( 1,'Aviva Stadium','Ireland','Dublin',50000 ) [42102-193]
+2017-12-11 15:06:41 jdbc[93]: exception
+org.h2.jdbc.JdbcSQLException: Table "VENUES" not found; SQL statement:
+insert into venues (id,name,country,city,capacity) values ( 1,'Aviva Stadium','Ireland','Dublin',50000 ) [42102-193]
+2017-12-11 15:06:49 jdbc[113]: exception
+org.h2.jdbc.JdbcSQLException: Table "CATEGORY" not found; SQL statement:
+select t0.id, t0.name from category t0 order by t0.name [42102-193]

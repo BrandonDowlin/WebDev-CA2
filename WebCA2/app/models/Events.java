@@ -8,24 +8,34 @@ import play.data.validation.*;
 @Entity
 public class Events extends Model {
 @Id
-int id;
+Long id;
 @Constraints.Required
 String name;
 @Constraints.Required
-String country;
+String venue;
 @Constraints.Required
 String date;
 @Constraints.Required
-int capacity;
+double price;
 
-public Venues(){
+@ManyToOne
+private Category category;
+
+public Events(){
 
 }
-public Venues(String name, String country, String city, int capacity){
+public Events(String name, String venue, String date, double price){
     this.name = name;
-    this.country = country;
-    this.city = city;
-    this.capacity = capacity;
+    this.venue = venue;
+    this.date = date;
+    this.price = price;
+}
+
+public Long getId(){
+    return id;
+}
+public void setId(Long id){
+    this.id = id;
 }
 
 public String getName(){
@@ -35,30 +45,39 @@ public void setName(String name){
     this.name = name;
 }
 
-public String getCountry(){
-    return country;
+public String getVenue(){
+    return venue;
 }
-public void setCountry(String country){
-    this.country = country;
-}
-
-public String getCity(){
-    return city;
-}
-public void setCity(String city){
-    this.city = city;
+public void setVenue(String venue){
+    this.venue = venue;
 }
 
-public int getCapacity(){
-    return capacity;
+public String getDate(){
+    return date;
 }
-public void setCapacity(int capacity){
-    this.capacity = capacity;
+public void setDate(String date){
+    this.date = date;
 }
 
-public static final Finder<int, Venues> find = new Finder<>(Venues.class);
+public double getPrice(){
+    return price;
+}
+public void setPrice(double price){
+    this.price = price;
+}
+
+public Category getCategory(){
+    return category;
+}
+public void setCategory(Category category){
+    this.category = category;
+}
+
+public static final Finder<Long, Events> find = new Finder<>(Events.class);
 
 
-public static final List<Venues> findAll(){
-    return Venues.find.all();
+public static final List<Events> findAll(){
+    return Events.find.all();
+}
+
 }

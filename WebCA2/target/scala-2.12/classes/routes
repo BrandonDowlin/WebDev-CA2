@@ -4,7 +4,7 @@
 
 # An example controller showing a sample home page
 GET     /                                  controllers.HomeController.index
-GET     /events                            controllers.HomeController.events
+GET     /events                            controllers.HomeController.events(cat: Long?=0L)
 GET     /venues                            controllers.HomeController.venues
 GET     /aboutus                           controllers.HomeController.aboutus
 GET     /profile                           controllers.HomeController.profile

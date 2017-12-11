@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/conf/routes
-// @DATE:Fri Nov 24 18:37:09 GMT 2017
+// @SOURCE:/home/wdd/webapps/WebDev-CA2/WebCA2/conf/routes
+// @DATE:Mon Dec 11 14:32:54 GMT 2017
 
 package controllers;
 

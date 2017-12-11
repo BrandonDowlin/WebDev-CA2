@@ -22,16 +22,16 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object events extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object events extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[List[models.Events],List[models.Category],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(events: List[models.Events], categories: List[models.Category]):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
-<html>
+Seq[Any](format.raw/*1.66*/("""
+"""),format.raw/*2.1*/("""<html>
 
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,197 +67,33 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
             <div class="col-sm-8">
                 <div class="well main">
 
-                    <h2>Filter Table</h2>
-                    <p>Search for a location in the input field.</p>
-
-                    <input class="search" type="text" placeholder="Search by performer.." id="myInput" onkeyup="myFunction()">
-
-                    <table class="w3-table-all w3-margin-top" id="myTable">
+                    <table class="table table-hover table-condensed">
+                        <thead>
+                        <!-- The header row-->
                         <tr>
-                            <th style="width:15%;text-align:center">Type</th>
-                            <th style="width:20%;text-align:center">Performer</th>
-                            <th style="width:20%;text-align:center">Time</th>
-                            <th style="width:20%;text-align:center">Price</th>
-                            <th style="width:5%;text-align:center">Venue</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Venue</th>
+                        <th>Date</th>
+                        <th>Price</th>
                         </tr>
-
-                        <tr class="av">
-                            <td>Concert</td>
-                            <td>The Script</td>
-                            <td>20:35</td>
-                            <td>€55.50</td>
-
-                            <td>
-                                <div class="dropdown">
-                                    <button class="dropbtn av">More info</button>
-                                    <div class="dropdown-content">
-
-                                        <a href="#">Country: Germany</a>
-                                        <a href="#">Location: Berlin</a>
-                                        <a href="#">SO36</a>
-                                        <a href="#">Date: 1st January 2018</a>
-                                    </div>
-                                </div>
-
-                            </td>
-
+                        </thead>
+                        <tbody>
+                        
+                        <!-- Product row(s) -->
+                        """),_display_(/*53.26*/for(e<-events) yield /*53.40*/ {_display_(Seq[Any](format.raw/*53.42*/("""
+                        """),format.raw/*54.25*/("""<tr>
+                        <td>"""),_display_(/*55.30*/e/*55.31*/.getId),format.raw/*55.37*/("""</td>
+                        <td>"""),_display_(/*56.30*/e/*56.31*/.getName),format.raw/*56.39*/("""</td>
+                        <td>"""),_display_(/*57.30*/e/*57.31*/.getCategory.getName),format.raw/*57.51*/("""</td>
+                        <td>"""),_display_(/*58.30*/e/*58.31*/.getVenue),format.raw/*58.40*/("""</td>
+                        <td>"""),_display_(/*59.30*/e/*59.31*/.getDate),format.raw/*59.39*/("""</td>
+                        <td class="numeric">&euro; """),_display_(/*60.53*/("%.2f".format(e.getPrice))),format.raw/*60.80*/("""</td>
                         </tr>
-                        <tr class="bv">
-                            <td>Stand-Up</td>
-                            <td>Michael McIntrye</td>
-                            <td>21:00</td>
-                            <td>€32.50</td>
-
-                            <td>
-                                <div class="dropdown">
-                                    <button class="dropbtn av">More info</button>
-                                    <div class="dropdown-content">
-
-                                        <a href="#">Country: Sweden</a>
-                                        <a href="#">Location: Stockholm</a>
-                                        <a href="#">Nalen</a>
-                                        <a href="#">Date: 3rd November 2018</a>
-                                    </div>
-                                </div>
-
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <tr class="av">
-                                <td>Concert</td>
-                                <td>Sam Smith</td>
-                                <td>18:00</td>
-                                <td>€52.50</td>
-
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="dropbtn av">More info</button>
-                                        <div class="dropdown-content">
-
-                                            <a href="#">Country: UK</a>
-                                            <a href="#">Location: London</a>
-                                            <a href="#">Wembley Stadium</a>
-                                            <a href="#">Date: 8th December 2017</a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-
-                            <tr>
-                                <tr class="bv">
-                                    <td>Concert</td>
-                                    <td>Niall Horan</td>
-                                    <td>21:00</td>
-                                    <td>€62.50</td>
-
-                                    <td>
-                                        <div class="dropdown">
-                                            <button class="dropbtn av">More info</button>
-                                            <div class="dropdown-content">
-
-                                                <a href="#">Country: Ireland</a>
-                                                <a href="#">Location: Dublin</a>
-                                                <a href="#">3Arena</a>
-                                                <a href="#">Date: 27th May 2018</a>
-                                            </div>
-                                        </div>
-
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <tr class="av">
-                                        <td>Stand-Up</td>
-                                        <td>Russell-Howard</td>
-                                        <td>20:30</td>
-                                        <td>€35.50</td>
-
-                                        <td>
-                                            <div class="dropdown">
-                                                <button class="dropbtn av">More info</button>
-                                                <div class="dropdown-content">
-
-                                                    <a href="#">Country: USA</a>
-                                                    <a href="#">Location: Chicago</a>
-                                                    <a href="#">The Second City</a>
-                                                    <a href="#">Date: 13th March 2018</a>
-                                                </div>
-                                            </div>
-
-                                        </td>
-
-                                    </tr>
-                                    <tr>
-                                        <tr class="bv">
-                                            <td>Musical</td>
-                                            <td>Hamilton</td>
-                                            <td>17:30</td>
-                                            <td>€27.50</td>
-
-                                            <td>
-                                                <div class="dropdown">
-                                                    <button class="dropbtn av">More info</button>
-                                                    <div class="dropdown-content">
-
-                                                        <a href="#">Country: Italy</a>
-                                                        <a href="#">Location: Venice</a>
-                                                        <a href="#">Chorus</a>
-                                                        <a href="#">Date: 11th February 2018</a>
-                                                    </div>
-                                                </div>
-
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <tr class="av">
-                                                <td>Hypnotist</td>
-                                                <td>Keith Barry</td>
-                                                <td>21:00</td>
-                                                <td>€40.00</td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button class="dropbtn av">More info</button>
-                                                        <div class="dropdown-content">
-
-                                                            <a href="#">Country: Ireland</a>
-                                                            <a href="#">Location: Dublin</a>
-                                                            <a href="#">Aviva</a>
-                                                            <a href="#">Date: 19th March 2018</a>
-                                                        </div>
-                                                    </div>
-
-                                                </td>
-
-                                            </tr>
-                                            <tr>
-                                                <tr class="bv">
-                                                    <td>Science</td>
-                                                    <td>Adam Savage & Michael Stevens</td>
-                                                    <td>17:00</td>
-                                                    <td>€25.00</td>
-
-                                                    <td>
-                                                        <div class="dropdown">
-                                                            <button class="dropbtn av">More info</button>
-                                                            <div class="dropdown-content">
-
-                                                                <a href="#">Country: France</a>
-                                                                <a href="#">Location: Paris</a>
-                                                                <a href="#">U-Arena</a>
-                                                                <a href="#">Date: 19th March 2018</a>
-                                                            </div>
-                                                        </div>
-
-                                                    </td>
-
-                                                </tr>
-
-                    </table>
+                      """)))}),format.raw/*62.24*/("""
+                        """),format.raw/*63.25*/("""</tbody> 
+                        </table>
                 </div>
             </div>
         </div>
@@ -267,34 +103,34 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
 </body>
 
-<script>
-    function myFunction() """),format.raw/*239.27*/("""{"""),format.raw/*239.28*/("""
-        """),format.raw/*240.9*/("""var input, filter, table, tr, td, i;
+<!-- <script>
+    function myFunction() """),format.raw/*75.27*/("""{"""),format.raw/*75.28*/("""
+        """),format.raw/*76.9*/("""var input, filter, table, tr, td, i;
         input = document.getElementById("myInput");
         filter = input.value.toUpperCase();
         table = document.getElementById("myTable");
         tr = table.getElementsByTagName("tr");
-        for (i = 0; i < tr.length; i++) """),format.raw/*245.41*/("""{"""),format.raw/*245.42*/("""
-            """),format.raw/*246.13*/("""td = tr[i].getElementsByTagName("td")[1];
-            if (td) """),format.raw/*247.21*/("""{"""),format.raw/*247.22*/("""
-                """),format.raw/*248.17*/("""if (td.innerHTML.toUpperCase().indexOf(filter) > -1) """),format.raw/*248.70*/("""{"""),format.raw/*248.71*/("""
-                    """),format.raw/*249.21*/("""tr[i].style.display = "";
-                """),format.raw/*250.17*/("""}"""),format.raw/*250.18*/(""" """),format.raw/*250.19*/("""else """),format.raw/*250.24*/("""{"""),format.raw/*250.25*/("""
-                    """),format.raw/*251.21*/("""tr[i].style.display = "none";
-                """),format.raw/*252.17*/("""}"""),format.raw/*252.18*/("""
-            """),format.raw/*253.13*/("""}"""),format.raw/*253.14*/("""
-        """),format.raw/*254.9*/("""}"""),format.raw/*254.10*/("""
-    """),format.raw/*255.5*/("""}"""),format.raw/*255.6*/("""
-"""),format.raw/*256.1*/("""</script>
+        for (i = 0; i < tr.length; i++) """),format.raw/*81.41*/("""{"""),format.raw/*81.42*/("""
+            """),format.raw/*82.13*/("""td = tr[i].getElementsByTagName("td")[1];
+            if (td) """),format.raw/*83.21*/("""{"""),format.raw/*83.22*/("""
+                """),format.raw/*84.17*/("""if (td.innerHTML.toUpperCase().indexOf(filter) > -1) """),format.raw/*84.70*/("""{"""),format.raw/*84.71*/("""
+                    """),format.raw/*85.21*/("""tr[i].style.display = "";
+                """),format.raw/*86.17*/("""}"""),format.raw/*86.18*/(""" """),format.raw/*86.19*/("""else """),format.raw/*86.24*/("""{"""),format.raw/*86.25*/("""
+                    """),format.raw/*87.21*/("""tr[i].style.display = "none";
+                """),format.raw/*88.17*/("""}"""),format.raw/*88.18*/("""
+            """),format.raw/*89.13*/("""}"""),format.raw/*89.14*/("""
+        """),format.raw/*90.9*/("""}"""),format.raw/*90.10*/("""
+    """),format.raw/*91.5*/("""}"""),format.raw/*91.6*/("""
+"""),format.raw/*92.1*/("""</script> -->
 
 </html>"""))
       }
     }
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(events:List[models.Events],categories:List[models.Category]): play.twirl.api.HtmlFormat.Appendable = apply(events,categories)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((List[models.Events],List[models.Category]) => play.twirl.api.HtmlFormat.Appendable) = (events,categories) => apply(events,categories)
 
   def ref: this.type = this
 
@@ -303,11 +139,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 18:37:11 GMT 2017
-                  SOURCE: /home/brandon/Yanika-Web/WebDev-CA2/WebCA2/app/views/events.scala.html
-                  HASH: 9a9d6d2ece02ce639ba6b1aa40cd915c9d37f716
-                  MATRIX: 1031->0|12461->11404|12491->11405|12528->11414|12829->11686|12859->11687|12901->11700|12992->11762|13022->11763|13068->11780|13150->11833|13180->11834|13230->11855|13301->11897|13331->11898|13361->11899|13395->11904|13425->11905|13475->11926|13550->11972|13580->11973|13622->11986|13652->11987|13689->11996|13719->11997|13752->12002|13781->12003|13810->12004
-                  LINES: 33->1|271->239|271->239|272->240|277->245|277->245|278->246|279->247|279->247|280->248|280->248|280->248|281->249|282->250|282->250|282->250|282->250|282->250|283->251|284->252|284->252|285->253|285->253|286->254|286->254|287->255|287->255|288->256
+                  DATE: Mon Dec 11 14:58:58 GMT 2017
+                  SOURCE: /home/wdd/webapps/WebDev-CA2/WebCA2/app/views/events.scala.html
+                  HASH: eb5e99cc08e31b5d4c1103f211093c6fbcd1e0d7
+                  MATRIX: 984->1|1143->65|1170->66|3318->2190|3348->2204|3388->2206|3441->2231|3502->2265|3512->2266|3539->2272|3601->2307|3611->2308|3640->2316|3702->2351|3712->2352|3753->2372|3815->2407|3825->2408|3855->2417|3917->2452|3927->2453|3956->2461|4041->2519|4089->2546|4179->2605|4232->2630|4515->2885|4544->2886|4580->2895|4880->3167|4909->3168|4950->3181|5040->3243|5069->3244|5114->3261|5195->3314|5224->3315|5273->3336|5343->3378|5372->3379|5401->3380|5434->3385|5463->3386|5512->3407|5586->3453|5615->3454|5656->3467|5685->3468|5721->3477|5750->3478|5782->3483|5810->3484|5838->3485
+                  LINES: 28->1|33->1|34->2|85->53|85->53|85->53|86->54|87->55|87->55|87->55|88->56|88->56|88->56|89->57|89->57|89->57|90->58|90->58|90->58|91->59|91->59|91->59|92->60|92->60|94->62|95->63|107->75|107->75|108->76|113->81|113->81|114->82|115->83|115->83|116->84|116->84|116->84|117->85|118->86|118->86|118->86|118->86|118->86|119->87|120->88|120->88|121->89|121->89|122->90|122->90|123->91|123->91|124->92
                   -- GENERATED --
               */
           

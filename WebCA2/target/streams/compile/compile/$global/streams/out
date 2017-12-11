@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/aboutus.scala.html:64:94: not found: value gmail[0m
-[0m[[0m[31merror[0m] [0m[0m                    <h4>If you have any questions please contact us by Email: theTicketShark@gmail.com  or by phone at 085835830</h4>[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                                             ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/WebDev-CA2/WebCA2/app/models/Venues.java:32:1:  int cannot be converted to java.lang.Long[0m
+[0m[[0m[31merror[0m] [0m[0m    return id;[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/WebDev-CA2/WebCA2/app/models/Venues.java:35:1:  java.lang.Long cannot be converted to int[0m
+[0m[[0m[31merror[0m] [0m[0m    this.id = id;[0m
