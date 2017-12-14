@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/webapps/WebDev-CA2/WebCA2/conf/routes
-// @DATE:Mon Dec 11 14:32:54 GMT 2017
+// @SOURCE:/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/conf/routes
+// @DATE:Fri Nov 24 18:37:09 GMT 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -104,8 +104,8 @@ package controllers.javascript {
     def events: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.events",
       """
-        function(cat0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "events" + _qS([(cat0 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Long]].javascriptUnbind + """)("cat", cat0))])})
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "events"})
         }
       """
     )

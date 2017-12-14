@@ -8,34 +8,24 @@ import play.data.validation.*;
 @Entity
 public class Events extends Model {
 @Id
-Long id;
+int id;
 @Constraints.Required
 String name;
 @Constraints.Required
-String venue;
+String country;
 @Constraints.Required
 String date;
 @Constraints.Required
-double price;
+int capacity;
 
-@ManyToOne
-private Category category;
-
-public Events(){
+public Venues(){
 
 }
-public Events(String name, String venue, String date, double price){
+public Venues(String name, String country, String city, int capacity){
     this.name = name;
-    this.venue = venue;
-    this.date = date;
-    this.price = price;
-}
-
-public Long getId(){
-    return id;
-}
-public void setId(Long id){
-    this.id = id;
+    this.country = country;
+    this.city = city;
+    this.capacity = capacity;
 }
 
 public String getName(){
@@ -45,39 +35,30 @@ public void setName(String name){
     this.name = name;
 }
 
-public String getVenue(){
-    return venue;
+public String getCountry(){
+    return country;
 }
-public void setVenue(String venue){
-    this.venue = venue;
-}
-
-public String getDate(){
-    return date;
-}
-public void setDate(String date){
-    this.date = date;
+public void setCountry(String country){
+    this.country = country;
 }
 
-public double getPrice(){
-    return price;
+public String getCity(){
+    return city;
 }
-public void setPrice(double price){
-    this.price = price;
-}
-
-public Category getCategory(){
-    return category;
-}
-public void setCategory(Category category){
-    this.category = category;
+public void setCity(String city){
+    this.city = city;
 }
 
-public static final Finder<Long, Events> find = new Finder<>(Events.class);
-
-
-public static final List<Events> findAll(){
-    return Events.find.all();
+public int getCapacity(){
+    return capacity;
+}
+public void setCapacity(int capacity){
+    this.capacity = capacity;
 }
 
+public static final Finder<int, Venues> find = new Finder<>(Venues.class);
+
+
+public static final List<Venues> findAll(){
+    return Venues.find.all();
 }

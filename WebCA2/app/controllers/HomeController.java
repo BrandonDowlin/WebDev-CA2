@@ -2,17 +2,6 @@ package controllers;
 
 import play.mvc.*;
 
-import play.api.Environment;
-import play.data.*;
-import play.db.ebean.Transactional;
-
-import java.util.*;
-import javax.inject.Inject;
-
-import models.*;
-
-import views.html.*;
-
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
@@ -26,47 +15,40 @@ public class HomeController extends Controller {
      * <code>GET</code> request with a path of <code>/</code>.
      */
     public Result index() {
-        return ok(index.render());
+        return ok(views.html.index.render());
     }
-    public Result events(Long cat){ 
-        List<Events> eventList = null;
-        List<Category> categoryList = Category.findAll();
-        if (cat == 0){
-            eventList = Events.findAll();
-        } else {
-            eventList = Category.find.ref(cat).getEvents();
-        }
-        return ok(events.render(eventList, categoryList));
+    public Result events() {
+        return ok(views.html.events.render());
     }
     public Result venues() {
-        return ok(venues.render());
+        return ok(views.html.venues.render());
     }
     public Result form() {
-        return ok(form.render());
+        return ok(views.html.form.render());
     }
     public Result profile() {
-        return ok(profile.render());
+        return ok(views.html.profile.render());
     }
     public Result aboutus() {
-        return ok(aboutus.render());
+        return ok(views.html.aboutus.render());
     }
     public Result Danny() {
-        return ok(Danny.render());
+        return ok(views.html.Danny.render());
     }
     public Result Gorillaz() {
-        return ok(Gorillaz.render());
+        return ok(views.html.Gorillaz.render());
     }
     public Result Jeff() {
-        return ok(Jeff.render());
+        return ok(views.html.Jeff.render());
     }
     public Result Kanye() {
-        return ok(Kanye.render());
+        return ok(views.html.Kanye.render());
     }
     public Result Keith() {
-        return ok(Keith.render());
+        return ok(views.html.Keith.render());
     }
     public Result Michael() {
-        return ok(Michael.render());
+        return ok(views.html.Michael.render());
     }
 
 }

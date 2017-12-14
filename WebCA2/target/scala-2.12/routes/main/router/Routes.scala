@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/webapps/WebDev-CA2/WebCA2/conf/routes
-// @DATE:Mon Dec 11 14:32:54 GMT 2017
+// @SOURCE:/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/conf/routes
+// @DATE:Fri Nov 24 18:37:09 GMT 2017
 
 package router
 
@@ -41,7 +41,7 @@ class Routes(
 
   def documentation = List(
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """events""", """controllers.HomeController.events(cat:Long ?= 0L)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """events""", """controllers.HomeController.events"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """venues""", """controllers.HomeController.venues"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """aboutus""", """controllers.HomeController.aboutus"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """profile""", """controllers.HomeController.profile"""),
@@ -83,12 +83,12 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("events")))
   )
   private[this] lazy val controllers_HomeController_events1_invoker = createInvoker(
-    HomeController_0.events(fakeValue[Long]),
+    HomeController_0.events,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
       "events",
-      Seq(classOf[Long]),
+      Nil,
       "GET",
       this.prefix + """events""",
       """""",
@@ -305,8 +305,8 @@ class Routes(
   
     // @LINE:7
     case controllers_HomeController_events1_route(params@_) =>
-      call(params.fromQuery[Long]("cat", Some(0L))) { (cat) =>
-        controllers_HomeController_events1_invoker.call(HomeController_0.events(cat))
+      call { 
+        controllers_HomeController_events1_invoker.call(HomeController_0.events)
       }
   
     // @LINE:8

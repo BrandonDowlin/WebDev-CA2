@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/webapps/WebDev-CA2/WebCA2/conf/routes
-// @DATE:Mon Dec 11 14:32:54 GMT 2017
+// @SOURCE:/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/conf/routes
+// @DATE:Fri Nov 24 18:37:09 GMT 2017
 
 import play.api.mvc.Call
 
@@ -68,9 +68,9 @@ package controllers {
     }
   
     // @LINE:7
-    def events(cat:Long = 0L): Call = {
+    def events(): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "events" + play.core.routing.queryString(List(if(cat == 0L) None else Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("cat", cat)))))
+      Call("GET", _prefix + { _defaultPrefix } + "events")
     }
   
     // @LINE:9

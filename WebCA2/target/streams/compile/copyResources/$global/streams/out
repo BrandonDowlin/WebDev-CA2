@@ -1,8 +1,4 @@
 [0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/wdd/webapps/WebDev-CA2/WebCA2/conf/evolutions,/home/wdd/webapps/WebDev-CA2/WebCA2/target/scala-2.12/classes/evolutions)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/wdd/webapps/WebDev-CA2/WebCA2/conf/application.conf,/home/wdd/webapps/WebDev-CA2/WebCA2/target/scala-2.12/classes/application.conf)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/wdd/webapps/WebDev-CA2/WebCA2/conf/logback.xml,/home/wdd/webapps/WebDev-CA2/WebCA2/target/scala-2.12/classes/logback.xml)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/wdd/webapps/WebDev-CA2/WebCA2/conf/routes,/home/wdd/webapps/WebDev-CA2/WebCA2/target/scala-2.12/classes/routes)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/wdd/webapps/WebDev-CA2/WebCA2/conf/evolutions/default,/home/wdd/webapps/WebDev-CA2/WebCA2/target/scala-2.12/classes/evolutions/default)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/wdd/webapps/WebDev-CA2/WebCA2/conf/evolutions/default/2.sql,/home/wdd/webapps/WebDev-CA2/WebCA2/target/scala-2.12/classes/evolutions/default/2.sql)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/wdd/webapps/WebDev-CA2/WebCA2/conf/evolutions/default/1.sql,/home/wdd/webapps/WebDev-CA2/WebCA2/target/scala-2.12/classes/evolutions/default/1.sql)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/conf/logback.xml,/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/target/scala-2.12/classes/logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/conf/routes,/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/target/scala-2.12/classes/routes)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/conf/application.conf,/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/target/scala-2.12/classes/application.conf)[0m
