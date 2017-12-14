@@ -8,7 +8,7 @@ import play.data.validation.*;
 @Entity
 public class Venues extends Model {
 @Id
-int id;
+Long id;
 @Constraints.Required
 String name;
 @Constraints.Required
@@ -56,10 +56,23 @@ public void setCapacity(int capacity){
     this.capacity = capacity;
 }
 
-public static final Finder<int, Venues> find = new Finder<>(Venues.class);
+public static final Finder<Long, Venues> find = new Finder<>(Venues.class);
 
 
 public static final List<Venues> findAll(){
     return Venues.find.all();
 }
+
+public Long getId() {
+    
+    return id;
+    
+    }
+    
+    public void setId(Long id) {
+    
+    this.id = id;
+    
+    }
+
 }

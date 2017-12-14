@@ -1,4 +1,6 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/fuck you/WebDev-CA2/WebCA2/app/views/aboutus.scala.html:64:94: not found: value gmail[0m
-[0m[[0m[31merror[0m] [0m[0m                    <h4>If you have any questions please contact us by Email: theTicketShark@gmail.com  or by phone at 085835830</h4>[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\brand\Documents\Fuck\WebDev-CA2\WebCA2\app\views\addEvent.scala.html:29:41: missing argument list for method events in class ReverseHomeController[0m
+[0m[[0m[31merror[0m] [0m[0mUnapplied methods are only converted to functions when a function type is expected.[0m
+[0m[[0m[31merror[0m] [0m[0mYou can make this conversion explicit by writing `events _` or `events(_)` instead of `events`.[0m
+[0m[[0m[31merror[0m] [0m[0m        <a href="@routes.HomeController.events">[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

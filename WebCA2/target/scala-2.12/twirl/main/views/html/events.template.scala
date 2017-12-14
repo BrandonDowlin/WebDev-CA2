@@ -22,15 +22,16 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object events extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object events extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[List[models.Events],List[models.Category],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(events: List[models.Events], categories: List[models.Category]):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
+Seq[Any](format.raw/*1.66*/("""
+"""),format.raw/*2.1*/("""<!DOCTYPE html>
 <html>
 
     <head>
@@ -42,6 +43,8 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <link rel="stylesheet" href="/assets/stylesheets/style.css" />
         <script  type="text/javascript" src="/assets/bootstrap/js/bootstrap.js"></script>
     </head>
+
+    
 
 <body>
     <!--Ronan did this page-->
@@ -62,239 +65,98 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
     <div class="container">
 
+        """),_display_(/*36.10*/if(flash.containsKey("success"))/*36.42*/{_display_(Seq[Any](format.raw/*36.43*/("""
+            """),format.raw/*37.13*/("""<div class="alert alert-success">
+              """),_display_(/*38.16*/flash/*38.21*/.get("success")),format.raw/*38.36*/("""
+            """),format.raw/*39.13*/("""</div>
+        """)))}),format.raw/*40.10*/("""
   
-        <div class="row">
+        """),format.raw/*42.9*/("""<div class="row">
             <div class="col-sm-8">
                 <div class="well main">
 
-                    <h2>Filter Table</h2>
-                    <p>Search for a location in the input field.</p>
+                    
 
-                    <input class="search" type="text" placeholder="Search by performer.." id="myInput" onkeyup="myFunction()">
-
-                    <table class="w3-table-all w3-margin-top" id="myTable">
+                    <table class="table table-bordered table-condensed">
+                        
+                        <thead>
+                        
+                        <!-- The header row-->
+                        
                         <tr>
-                            <th style="width:15%;text-align:center">Type</th>
-                            <th style="width:20%;text-align:center">Performer</th>
-                            <th style="width:20%;text-align:center">Time</th>
-                            <th style="width:20%;text-align:center">Price</th>
-                            <th style="width:5%;text-align:center">Venue</th>
+                        
+                        <th>ID</th>
+                        
+                        <th>Name</th>
+                      
+                        <th>Category</th>
+                        
+                        <th>Description</th>
+                        
+                        <th>Stock</th>
+                        
+                        <th>Price</th>
+                        
                         </tr>
-
-                        <tr class="av">
-                            <td>Concert</td>
-                            <td>The Script</td>
-                            <td>20:35</td>
-                            <td>€55.50</td>
-
-                            <td>
-                                <div class="dropdown">
-                                    <button class="dropbtn av">More info</button>
-                                    <div class="dropdown-content">
-
-                                        <a href="#">Country: Germany</a>
-                                        <a href="#">Location: Berlin</a>
-                                        <a href="#">SO36</a>
-                                        <a href="#">Date: 1st January 2018</a>
-                                    </div>
-                                </div>
-
-                            </td>
-
+                        
+                        </thead>
+                        
+                        <tbody>
+                        
+                        <!-- Product row(s) -->
+                        """),_display_(/*75.26*/for(e<-events) yield /*75.40*/ {_display_(Seq[Any](format.raw/*75.42*/("""
+                        """),format.raw/*76.25*/("""<tr>
+                        
+                        <td>"""),_display_(/*78.30*/e/*78.31*/.getId),format.raw/*78.37*/("""</td>
+                        
+                        <td>"""),_display_(/*80.30*/e/*80.31*/.getName),format.raw/*80.39*/("""</td>
+                      
+                        <td>"""),_display_(/*82.30*/e/*82.31*/.getCategory.getName),format.raw/*82.51*/("""</td>
+                        
+                        <td>"""),_display_(/*84.30*/e/*84.31*/.getVenue),format.raw/*84.40*/("""</td>
+                        
+                        <td>"""),_display_(/*86.30*/e/*86.31*/.getDate),format.raw/*86.39*/("""</td>
+                      
+                        <td class="numeric">&euro; """),_display_(/*88.53*/("%.2f".format(e.getPrice))),format.raw/*88.80*/("""</td>
+                      
+                        <td>
+                          <a href=""""),_display_(/*91.37*/routes/*91.43*/.HomeController.updateEvent(e.getId)),format.raw/*91.79*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                          </a>
+                        </td>
+                      
+                        <td>
+                          <a href=""""),_display_(/*97.37*/routes/*97.43*/.HomeController.deleteEvent(e.getId)),format.raw/*97.79*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
+                            <span class="glyphicon glyphicon-trash"></span>
+                          </a>
+                        </td>
+                        
                         </tr>
-                        <tr class="bv">
-                            <td>Stand-Up</td>
-                            <td>Michael McIntrye</td>
-                            <td>21:00</td>
-                            <td>€32.50</td>
-
-                            <td>
-                                <div class="dropdown">
-                                    <button class="dropbtn av">More info</button>
-                                    <div class="dropdown-content">
-
-                                        <a href="#">Country: Sweden</a>
-                                        <a href="#">Location: Stockholm</a>
-                                        <a href="#">Nalen</a>
-                                        <a href="#">Date: 3rd November 2018</a>
-                                    </div>
-                                </div>
-
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <tr class="av">
-                                <td>Concert</td>
-                                <td>Sam Smith</td>
-                                <td>18:00</td>
-                                <td>€52.50</td>
-
-                                <td>
-                                    <div class="dropdown">
-                                        <button class="dropbtn av">More info</button>
-                                        <div class="dropdown-content">
-
-                                            <a href="#">Country: UK</a>
-                                            <a href="#">Location: London</a>
-                                            <a href="#">Wembley Stadium</a>
-                                            <a href="#">Date: 8th December 2017</a>
-                                        </div>
-                                    </div>
-
-                                </td>
-
-                            </tr>
-
-                            <tr>
-                                <tr class="bv">
-                                    <td>Concert</td>
-                                    <td>Niall Horan</td>
-                                    <td>21:00</td>
-                                    <td>€62.50</td>
-
-                                    <td>
-                                        <div class="dropdown">
-                                            <button class="dropbtn av">More info</button>
-                                            <div class="dropdown-content">
-
-                                                <a href="#">Country: Ireland</a>
-                                                <a href="#">Location: Dublin</a>
-                                                <a href="#">3Arena</a>
-                                                <a href="#">Date: 27th May 2018</a>
-                                            </div>
-                                        </div>
-
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <tr class="av">
-                                        <td>Stand-Up</td>
-                                        <td>Russell-Howard</td>
-                                        <td>20:30</td>
-                                        <td>€35.50</td>
-
-                                        <td>
-                                            <div class="dropdown">
-                                                <button class="dropbtn av">More info</button>
-                                                <div class="dropdown-content">
-
-                                                    <a href="#">Country: USA</a>
-                                                    <a href="#">Location: Chicago</a>
-                                                    <a href="#">The Second City</a>
-                                                    <a href="#">Date: 13th March 2018</a>
-                                                </div>
-                                            </div>
-
-                                        </td>
-
-                                    </tr>
-                                    <tr>
-                                        <tr class="bv">
-                                            <td>Musical</td>
-                                            <td>Hamilton</td>
-                                            <td>17:30</td>
-                                            <td>€27.50</td>
-
-                                            <td>
-                                                <div class="dropdown">
-                                                    <button class="dropbtn av">More info</button>
-                                                    <div class="dropdown-content">
-
-                                                        <a href="#">Country: Italy</a>
-                                                        <a href="#">Location: Venice</a>
-                                                        <a href="#">Chorus</a>
-                                                        <a href="#">Date: 11th February 2018</a>
-                                                    </div>
-                                                </div>
-
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <tr class="av">
-                                                <td>Hypnotist</td>
-                                                <td>Keith Barry</td>
-                                                <td>21:00</td>
-                                                <td>€40.00</td>
-
-                                                <td>
-                                                    <div class="dropdown">
-                                                        <button class="dropbtn av">More info</button>
-                                                        <div class="dropdown-content">
-
-                                                            <a href="#">Country: Ireland</a>
-                                                            <a href="#">Location: Dublin</a>
-                                                            <a href="#">Aviva</a>
-                                                            <a href="#">Date: 19th March 2018</a>
-                                                        </div>
-                                                    </div>
-
-                                                </td>
-
-                                            </tr>
-                                            <tr>
-                                                <tr class="bv">
-                                                    <td>Science</td>
-                                                    <td>Adam Savage & Michael Stevens</td>
-                                                    <td>17:00</td>
-                                                    <td>€25.00</td>
-
-                                                    <td>
-                                                        <div class="dropdown">
-                                                            <button class="dropbtn av">More info</button>
-                                                            <div class="dropdown-content">
-
-                                                                <a href="#">Country: France</a>
-                                                                <a href="#">Location: Paris</a>
-                                                                <a href="#">U-Arena</a>
-                                                                <a href="#">Date: 19th March 2018</a>
-                                                            </div>
-                                                        </div>
-
-                                                    </td>
-
-                                                </tr>
-
-                    </table>
+                      """)))}),format.raw/*103.24*/("""
+                        
+                        """),format.raw/*105.25*/("""</tbody>
+                        
+                        </table>
+                        <p>
+                            <a href=""""),_display_(/*109.39*/routes/*109.45*/.HomeController.addEvent()),format.raw/*109.71*/("""">
+                                <button class="btn btn-primary">Add a event</button>
+                            </a>
                 </div>
             </div>
         </div>
         <div class="footer">
             <img src="/assets/images/Concert.jpg">
             </img></div>
-
+            <script src=""""),_display_(/*118.27*/routes/*118.33*/.Assets.versioned("javascripts/main.js")),format.raw/*118.73*/(""""></script>
 </body>
-
-<script>
-    function myFunction() """),format.raw/*239.27*/("""{"""),format.raw/*239.28*/("""
-        """),format.raw/*240.9*/("""var input, filter, table, tr, td, i;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        for (i = 0; i < tr.length; i++) """),format.raw/*245.41*/("""{"""),format.raw/*245.42*/("""
-            """),format.raw/*246.13*/("""td = tr[i].getElementsByTagName("td")[1];
-            if (td) """),format.raw/*247.21*/("""{"""),format.raw/*247.22*/("""
-                """),format.raw/*248.17*/("""if (td.innerHTML.toUpperCase().indexOf(filter) > -1) """),format.raw/*248.70*/("""{"""),format.raw/*248.71*/("""
-                    """),format.raw/*249.21*/("""tr[i].style.display = "";
-                """),format.raw/*250.17*/("""}"""),format.raw/*250.18*/(""" """),format.raw/*250.19*/("""else """),format.raw/*250.24*/("""{"""),format.raw/*250.25*/("""
-                    """),format.raw/*251.21*/("""tr[i].style.display = "none";
-                """),format.raw/*252.17*/("""}"""),format.raw/*252.18*/("""
-            """),format.raw/*253.13*/("""}"""),format.raw/*253.14*/("""
-        """),format.raw/*254.9*/("""}"""),format.raw/*254.10*/("""
-    """),format.raw/*255.5*/("""}"""),format.raw/*255.6*/("""
-"""),format.raw/*256.1*/("""</script>
-
 </html>"""))
       }
     }
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(events:List[models.Events],categories:List[models.Category]): play.twirl.api.HtmlFormat.Appendable = apply(events,categories)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((List[models.Events],List[models.Category]) => play.twirl.api.HtmlFormat.Appendable) = (events,categories) => apply(events,categories)
 
   def ref: this.type = this
 
@@ -303,11 +165,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 18:37:11 GMT 2017
-                  SOURCE: /home/brandon/Yanika-Web/WebDev-CA2/WebCA2/app/views/events.scala.html
-                  HASH: 9a9d6d2ece02ce639ba6b1aa40cd915c9d37f716
-                  MATRIX: 1031->0|12461->11404|12491->11405|12528->11414|12829->11686|12859->11687|12901->11700|12992->11762|13022->11763|13068->11780|13150->11833|13180->11834|13230->11855|13301->11897|13331->11898|13361->11899|13395->11904|13425->11905|13475->11926|13550->11972|13580->11973|13622->11986|13652->11987|13689->11996|13719->11997|13752->12002|13781->12003|13810->12004
-                  LINES: 33->1|271->239|271->239|272->240|277->245|277->245|278->246|279->247|279->247|280->248|280->248|280->248|281->249|282->250|282->250|282->250|282->250|282->250|283->251|284->252|284->252|285->253|285->253|286->254|286->254|287->255|287->255|288->256
+                  DATE: Thu Dec 14 22:04:37 GMT 2017
+                  SOURCE: C:/Users/brand/Documents/stop/WebDev-CA2/WebCA2/app/views/events.scala.html
+                  HASH: 9ac64122268e1b42d0a723cab04f8edca7e994d7
+                  MATRIX: 984->1|1143->65|1170->66|2641->1513|2682->1545|2721->1546|2762->1559|2838->1608|2852->1613|2888->1628|2929->1641|2976->1657|3015->1669|4069->2696|4099->2710|4139->2712|4192->2737|4278->2796|4288->2797|4315->2803|4402->2863|4412->2864|4441->2872|4526->2930|4536->2931|4577->2951|4664->3011|4674->3012|4704->3021|4791->3081|4801->3082|4830->3090|4938->3171|4986->3198|5107->3292|5122->3298|5179->3334|5495->3623|5510->3629|5567->3665|5877->3943|5956->3993|6117->4126|6133->4132|6181->4158|6518->4467|6534->4473|6596->4513
+                  LINES: 28->1|33->1|34->2|68->36|68->36|68->36|69->37|70->38|70->38|70->38|71->39|72->40|74->42|107->75|107->75|107->75|108->76|110->78|110->78|110->78|112->80|112->80|112->80|114->82|114->82|114->82|116->84|116->84|116->84|118->86|118->86|118->86|120->88|120->88|123->91|123->91|123->91|129->97|129->97|129->97|135->103|137->105|141->109|141->109|141->109|150->118|150->118|150->118
                   -- GENERATED --
               */
           

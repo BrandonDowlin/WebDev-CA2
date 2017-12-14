@@ -4,7 +4,7 @@
 
 # An example controller showing a sample home page
 GET     /                                  controllers.HomeController.index
-GET     /events                            controllers.HomeController.events
+GET     /events                            controllers.HomeController.events(cat: Long?=0L)
 GET     /venues                            controllers.HomeController.venues
 GET     /aboutus                           controllers.HomeController.aboutus
 GET     /profile                           controllers.HomeController.profile
@@ -15,6 +15,11 @@ GET     /jeff-dunham                       controllers.HomeController.Jeff
 GET     /kanye-west                        controllers.HomeController.Kanye
 GET     /keith-barry                       controllers.HomeController.Keith
 GET     /michael-mcintyre                  controllers.HomeController.Michael
+
+GET     /addevent                          controllers.HomeController.addEvent
+POST    /addEventSubmit                    controllers.HomeController.addEventSubmit
+GET     /deleteEvent/:id                   controllers.HomeController.deleteEvent(id: Long)
+GET     /updateEvent/:id                   controllers.HomeController.updateEvent(id: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

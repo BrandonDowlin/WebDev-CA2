@@ -92,10 +92,17 @@ Seq[Any](format.raw/*7.32*/("""
             </div>
         </nav>
     <body>
-        """),_display_(/*64.10*/content),format.raw/*64.17*/("""
+            div class="containter">
+            <div class="col-sm-2"></div>
+            <div id="Content" class="col-sm-5 col-centered">
+                <div id="contentWellTemp" class="well well-sm">
+        """),_display_(/*68.10*/content),format.raw/*68.17*/("""
+                """),format.raw/*69.17*/("""</div>
+            </div>
+        </div>
 
         
-    """),format.raw/*67.5*/("""</body>
+    </body>
     <div class="footerTemp">
 		<img src="/assets/images/Concert.jpg">
 		</img></div>
@@ -116,11 +123,11 @@ Seq[Any](format.raw/*7.32*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 18:37:11 GMT 2017
-                  SOURCE: /home/brandon/Yanika-Web/WebDev-CA2/WebCA2/app/views/temp.scala.html
-                  HASH: 487a839e725d7936382098fa3e4419bf50bff725
-                  MATRIX: 1206->260|1331->290|1358->291|1467->425|1503->434|1538->442|1564->447|4632->3491|4660->3498|4702->3513
-                  LINES: 33->7|38->7|39->8|43->12|44->13|44->13|44->13|95->64|95->64|98->67
+                  DATE: Thu Dec 14 22:04:37 GMT 2017
+                  SOURCE: C:/Users/brand/Documents/stop/WebDev-CA2/WebCA2/app/views/temp.scala.html
+                  HASH: 3c4a70bf0dc84bb6dd144c24431aaa5c626dc485
+                  MATRIX: 1206->260|1331->290|1358->291|1467->425|1503->434|1538->442|1564->447|4834->3693|4862->3700|4907->3717
+                  LINES: 33->7|38->7|39->8|43->12|44->13|44->13|44->13|99->68|99->68|100->69
                   -- GENERATED --
               */
           

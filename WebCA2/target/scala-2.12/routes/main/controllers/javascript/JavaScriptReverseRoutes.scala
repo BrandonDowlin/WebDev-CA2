@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/brandon/Yanika-Web/WebDev-CA2/WebCA2/conf/routes
-// @DATE:Fri Nov 24 18:37:09 GMT 2017
+// @SOURCE:C:/Users/brand/Documents/stop/WebDev-CA2/WebCA2/conf/routes
+// @DATE:Thu Dec 14 22:04:37 GMT 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -20,12 +20,42 @@ package controllers.javascript {
     }
 
   
+    // @LINE:21
+    def deleteEvent: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.deleteEvent",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "deleteEvent/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
     // @LINE:13
     def Gorillaz: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.Gorillaz",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "gorillaz"})
+        }
+      """
+    )
+  
+    // @LINE:22
+    def updateEvent: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.updateEvent",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "updateEvent/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:19
+    def addEvent: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.addEvent",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addevent"})
         }
       """
     )
@@ -104,8 +134,18 @@ package controllers.javascript {
     def events: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.events",
       """
+        function(cat0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "events" + _qS([(cat0 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Long]].javascriptUnbind + """)("cat", cat0))])})
+        }
+      """
+    )
+  
+    // @LINE:20
+    def addEventSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.addEventSubmit",
+      """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "events"})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "addEventSubmit"})
         }
       """
     )
@@ -142,7 +182,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:20
+  // @LINE:25
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -150,7 +190,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:20
+    // @LINE:25
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
