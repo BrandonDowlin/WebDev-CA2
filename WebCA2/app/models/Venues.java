@@ -21,7 +21,8 @@ int capacity;
 public Venues(){
 
 }
-public Venues(String name, String country, String city, int capacity){
+public Venues(Long id, String name, String country, String city, int capacity){
+    this.id = id;
     this.name = name;
     this.country = country;
     this.city = city;

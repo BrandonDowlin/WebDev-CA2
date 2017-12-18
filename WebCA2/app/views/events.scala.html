@@ -85,7 +85,7 @@
                         
                         <td>@e.getDate</td>
                       
-                        <td class="numeric">&euro; @("%.2f".format(e.getPrice))</td>
+                        <td class="numeric">&euro; @("%.0f".format(e.getPrice))</td>
                       
                         <td>
                           <a href="@routes.HomeController.updateEvent(e.getId)" class="button-xs btn-danger" onclick="return confirmDel();">

@@ -1,6 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\brand\Documents\Fuck\WebDev-CA2\WebCA2\app\views\addEvent.scala.html:29:41: missing argument list for method events in class ReverseHomeController[0m
-[0m[[0m[31merror[0m] [0m[0mUnapplied methods are only converted to functions when a function type is expected.[0m
-[0m[[0m[31merror[0m] [0m[0mYou can make this conversion explicit by writing `events _` or `events(_)` instead of `events`.[0m
-[0m[[0m[31merror[0m] [0m[0m        <a href="@routes.HomeController.events">[0m
-[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/brandon/Web/WebDev-CA2/WebCA2/app/controllers/HomeController.java:41:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method render(java.util.List<models.Venues>)[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class models.Venues[0m
+[0m[[0m[31merror[0m] [0m[0m        return ok(Venues.render(venueList));[0m

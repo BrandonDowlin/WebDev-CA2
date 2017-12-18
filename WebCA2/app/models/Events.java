@@ -24,7 +24,8 @@ private Category category;
 public Events(){
 
 }
-public Events(String name, String venue, String date, double price){
+public Events(Long id, String name, String venue, String date, double price){
+    this.id = id;
     this.name = name;
     this.venue = venue;
     this.date = date;
@@ -55,7 +56,7 @@ public void setDate(String date){
 public double getPrice(){
     return price;
 }
-public void setCapacity(double price){
+public void setPrice(double price){
     this.price = price;
 }
 

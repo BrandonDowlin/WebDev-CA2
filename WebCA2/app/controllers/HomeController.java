@@ -37,7 +37,8 @@ public class HomeController extends Controller {
         return ok(events.render(eventList, categoryList));
     }
     public Result venues() {
-        return ok(views.html.venues.render());
+        List<Venues> venueList = Venues.findAll();
+        return ok(venues.render(venueList));
     }
     public Result form() {
         return ok(views.html.form.render());
@@ -119,4 +120,46 @@ public class HomeController extends Controller {
         }
         return ok(addEvent.render(eventForm));
     }
+
+    public Result addVenue(){
+        Form<Venues> venueForm = formFactory.form(Venues.class);
+        return ok(addVenue.render(venueForm));
+    }
+
+    public Result addVenueSubmit(){
+        
+                Form<Venues> newVenueForm = formFactory.form(Venues.class).bindFromRequest();
+        
+                if (newVenueForm.hasErrors()) {
+                    return badRequest(addVenue.render(newVenueForm));
+                } else {
+                    Venues newVenue = newVenueForm.get();
+                    if (newVenue.getId() == null){
+                        newVenue.save();
+                    } else if (newVenue.getId() != null) {
+                        newVenue.update();
+                    }
+                    flash("success", "Venue "+ newVenue.getName() + " was added");
+                    return redirect(controllers.routes.HomeController.venues());
+                }
+            }
+            public Result deleteVenue(Long id){
+                Venues.find.ref(id).delete();
+                flash("success", "Venue has been deleted");
+                return redirect(routes.HomeController.venues());
+            }
+
+            @Transactional
+            public Result updateVenue(Long id){
+                Venues  v;
+                Form<Venues> venueForm;
+
+                try {
+                    v = Venues.find.byId(id);
+                    venueForm = formFactory.form(Venues.class).fill(v);
+                } catch (Exception ex) {
+                    return badRequest("error");
+                }
+                return ok(addVenue.render(venueForm));
+            }
 }

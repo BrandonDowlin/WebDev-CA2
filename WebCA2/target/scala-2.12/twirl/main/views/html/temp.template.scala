@@ -24,90 +24,74 @@ import play.core.j.PlayFormsMagicForJava._
 
 object temp extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[String,Html,play.twirl.api.HtmlFormat.Appendable] {
 
-  /*
- * This template is called from the `index` template. This template
- * handles the rendering of the page header and body tags. It takes
- * two arguments, a `String` for the title of the page and an `Html`
- * object to insert into the body of the page.
- */
-  def apply/*7.2*/(title: String)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
+  /**/
+  def apply/*1.2*/(title: String)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*7.32*/("""
-"""),format.raw/*8.1*/("""<!--Brandon did this page-->
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        """),format.raw/*12.62*/("""
-        """),format.raw/*13.9*/("""<title>"""),_display_(/*13.17*/title),format.raw/*13.22*/("""</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script data-require="jquery@3.0.0" data-semver="3.0.0" src="/assets/javascripts/jquery.js"></script>
-        <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-        <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" />
-        <link data-require="bootstrap@3.3.6" data-semver="3.3.6" rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" />
-        <link rel="stylesheet" href="/assets/stylesheets/index.css" />
-        <script  type="text/javascript" src="/assets/bootstrap/js/bootstrap.js"></script>
-    </head>
-    <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <img src ="/assets/images/logo.png">
-                </div>
-                <ul class="nav navbar-nav"><li><a href="/"><font color="#d3d3d3"; size="3">Ticket Shark |</font></a></li>
-                    <li class="active"><a href="/">Home</a></li>
-                    <li><a href="/venues">Venues</a></li>
-                    <li><a href="/events">Events</a></li>
-                    <li><a href="/aboutus">About us</a></li>
-                    <li><a href="/profile">My Profile</a></li>
-                    
-                    <li class="dropdown">
-              <a href="/events" class="login-a" data-toggle="dropdown"> <b>Sign in</b> <span class="caret"></span> </a>
-                <ul id="login" class="dropdown-menu">
-                    <li>
-                         <div class="row">
-                                <div class="col-md-12">
-                        
-                                    <p></p>
-                                    
-                                     <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                            <div class="form-group">
-                                                 <label class="email">Email address</label>
-                                                 <input type="email" class="form-control" placeholder="Email address" required>
-                                            </div>
-                                            <div class="form-group">
-                                                 <label class="password">Password</label>
-                                                 <input type="password" class="form-control" placeholder="Password" required>
-                                            <p></p>
-                                            <div class="form-group">
-                                                 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                                            </div>
-                                            
-                
-                </ul>
-                </li>
-    
-                </ul>
-            </div>
-        </nav>
-    <body>
-            div class="containter">
-            <div class="col-sm-2"></div>
-            <div id="Content" class="col-sm-5 col-centered">
-                <div id="contentWellTemp" class="well well-sm">
-        """),_display_(/*68.10*/content),format.raw/*68.17*/("""
-                """),format.raw/*69.17*/("""</div>
-            </div>
-        </div>
+Seq[Any](format.raw/*1.32*/("""
 
-        
-    </body>
-    <div class="footerTemp">
-		<img src="/assets/images/Concert.jpg">
-		</img></div>
-</html>
-"""))
+"""),format.raw/*3.1*/("""<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script data-require="jquery@3.0.0" data-semver="3.0.0" src="/assets/javascripts/jquery.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" />
+    <link data-require="bootstrap@3.3.6" data-semver="3.3.6" rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="/assets/stylesheets/main.css" />
+    <script  type="text/javascript" src="/assets/bootstrap/js/bootstrap.js"></script>
+</head>
+
+<body>
+
+    <title>Venues</title>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img src ="/assets/images/logo.png">
+            </div>
+            
+            <ul class="nav navbar-nav"><li><a href="/"><font color="#d3d3d3"; size="3">Ticket Shark |</font></a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/venues">Venues</a></li>
+                <li><a href="/events">Events</a></li>
+                <li><a href="/aboutus">About us</a></li>
+				<li><a href="/profile">My Profile</a></li>
+                
+    </nav>
+
+<container>
+
+<div class="row">
+<div class="col-md-12">
+<div class="content">
+"""),_display_(/*40.2*/content),format.raw/*40.9*/("""
+"""),format.raw/*41.1*/("""</div>
+</div>
+</div>
+
+</container>
+
+<container>
+
+<div class="row">
+<div class="col-md-12">
+</div>
+</div>
+
+</container>
+
+<div class="footer">
+    <img src="/assets/images/Concert.jpg">
+    </img></div>
+<script src=""""),_display_(/*59.15*/routes/*59.21*/.Assets.versioned("javascripts/main.js")),format.raw/*59.61*/(""""></script>
+</body>
+
+</html> """))
       }
     }
   }
@@ -123,11 +107,11 @@ Seq[Any](format.raw/*7.32*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 14 22:04:37 GMT 2017
-                  SOURCE: C:/Users/brand/Documents/stop/WebDev-CA2/WebCA2/app/views/temp.scala.html
-                  HASH: 3c4a70bf0dc84bb6dd144c24431aaa5c626dc485
-                  MATRIX: 1206->260|1331->290|1358->291|1467->425|1503->434|1538->442|1564->447|4834->3693|4862->3700|4907->3717
-                  LINES: 33->7|38->7|39->8|43->12|44->13|44->13|44->13|99->68|99->68|100->69
+                  DATE: Mon Dec 18 19:02:45 GMT 2017
+                  SOURCE: /home/brandon/Web/WebDev-CA2/WebCA2/app/views/temp.scala.html
+                  HASH: e87d9e68e329d0c814d473b1dd6768131a6e95d5
+                  MATRIX: 952->1|1077->31|1105->33|2551->1456|2578->1463|2606->1464|2848->1679|2863->1685|2924->1725
+                  LINES: 28->1|33->1|35->3|72->40|72->40|73->41|91->59|91->59|91->59
                   -- GENERATED --
               */
           

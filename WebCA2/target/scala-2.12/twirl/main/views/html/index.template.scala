@@ -95,38 +95,54 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
           <div class="col-sm-1"></div>
             <div id="left" class="col-sm-2">
               <div id="sidebar" class="well well-sm">
-                <a href="/danny-brown">
-                    <div  id="panel1" class="panel panel-default">
-                            <div class="panel-heading"><h4> Event Notifications </h4></div>
-                            <div class="panel-body">SOLD OUT</div>
+                    <div class="panel-heading"><h4> Follow Us </h4></div>
+                    <a href="#">
+                    <div class="panel panel-default">
+                            <div class="panel-body">
+                                    <img src="/assets/images/facebook.png"/>
+                            </div>
                     </div>
                 </a>
-                <a href="/gorillaz">
-                    <div id="panel2" class="panel panel-default">
-                            <div class="panel-body">NOW AVAILABLE</div>
+                <a href="#">
+                    <div class="panel panel-default">
+                            <div class="panel-body">
+                                    <img src="/assets/images/twitter.jpg"/>
+                            </div>
                     </div>
                 </a>
-                <a href="/jeff-dunham">
-                    <div id="panel3" class="panel panel-default">
-                            <div class="panel-body">COMING SOON</div>
+                <a href="#">
+                    <div class="panel panel-default">
+                            <div class="panel-body">
+                                    <img src="/assets/images/google-plus.png"/>
+                            </div>
                             
                     </div>
                 </a>
-                <a href="/kanye-west">
-                    <div id="panel4" class="panel panel-default">
-                            <div class="panel-body">SOLD OUT</div>
-                    </div>
-                </a>
-                <a href="/keith-barry">
-                    <div id="panel5" class="panel panel-default">
-                            <div class="panel-body">SOLD OUT</div>
-                    </div>
-                </a>
-                <a href="/michael-mcintyre">
-                    <div id="panel6" class="panel panel-default">
-                            <div class="panel-body">CANCELLED</div>
-                    </div>
-                </a>
+                <a href="#">
+                        <div class="panel panel-default">
+                                <div class="panel-body">
+                                        <img src="/assets/images/snapchat.png"/>
+                                </div>
+                                
+                        </div>
+                    </a>
+                
+                <div class="panel-heading"><h4> Download the App </h4></div>
+                <a href="#">
+                        <div class="panel panel-default">
+                                <div class="panel-body">
+                                        <img src="/assets/images/play-store.png"/>
+                                </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                            <div class="panel panel-default">
+                                    <div class="panel-body">
+                                            <img src="/assets/images/app-store.jpg"/>
+                                    </div>
+                            </div>
+                        </a>
+               
                    
                     
                     
@@ -233,9 +249,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 14 22:04:37 GMT 2017
-                  SOURCE: C:/Users/brand/Documents/stop/WebDev-CA2/WebCA2/app/views/index.scala.html
-                  HASH: 2802139e4aed3a9cb10fdda37144d971749401e3
+                  DATE: Mon Dec 18 19:49:28 GMT 2017
+                  SOURCE: /home/brandon/Web/WebDev-CA2/WebCA2/app/views/index.scala.html
+                  HASH: 61d152def18a6a704d405c3fbb448591d0798bad
                   MATRIX: 1030->0
                   LINES: 33->1
                   -- GENERATED --

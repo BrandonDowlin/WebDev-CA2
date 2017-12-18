@@ -21,5 +21,10 @@ POST    /addEventSubmit                    controllers.HomeController.addEventSu
 GET     /deleteEvent/:id                   controllers.HomeController.deleteEvent(id: Long)
 GET     /updateEvent/:id                   controllers.HomeController.updateEvent(id: Long)
 
+GET     /addvenue                          controllers.HomeController.addVenue
+POST    /addVenueSubmit                    controllers.HomeController.addVenueSubmit
+GET     /deleteVenue/:id                   controllers.HomeController.deleteVenue(id: Long)
+GET     /updateVenue/:id                   controllers.HomeController.updateVenue(id: Long)
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
