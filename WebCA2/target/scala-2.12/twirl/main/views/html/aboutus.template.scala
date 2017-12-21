@@ -22,15 +22,16 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object aboutus extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object aboutus extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
+Seq[Any](format.raw/*1.27*/("""
+"""),format.raw/*2.1*/("""<!DOCTYPE html>
 <html>
 
     <head>
@@ -58,8 +59,14 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                 <li><a href="/venues">Venues</a></li>
                 <li><a href="/events">Events</a></li>
                 <li class="active"><a href="/aboutus">About us</a></li>
-                <li><a href="/profile">My Profile</a></li>
-			</ul>
+                """),_display_(/*30.18*/if(user != null )/*30.35*/{_display_(Seq[Any](format.raw/*30.36*/("""
+                    """),format.raw/*31.21*/("""<li><a href="/profile">My Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/cart">Shopping Cart</a></li>
+                    """)))}/*34.23*/else/*34.28*/{_display_(Seq[Any](format.raw/*34.29*/("""
+                    """),format.raw/*35.21*/("""<li><a href="/login">Login</a></li>    
+                    """)))}),format.raw/*36.22*/("""
+			"""),format.raw/*37.4*/("""</ul>
 
     </nav>
 	<body>
@@ -107,9 +114,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
     }
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(user)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (user) => apply(user)
 
   def ref: this.type = this
 
@@ -118,11 +125,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 18 16:01:54 GMT 2017
-                  SOURCE: /home/brandon/Web/WebDev-CA2/WebCA2/app/views/aboutus.scala.html
-                  HASH: 5f7fde15a49044f7b1b7e630845d0781fc289ef9
-                  MATRIX: 1032->0
-                  LINES: 33->1
+                  DATE: Thu Dec 21 18:47:08 GMT 2017
+                  SOURCE: C:/Users/brand/Documents/Web/WebDev-CA2/WebCA2/app/views/aboutus.scala.html
+                  HASH: 414ca62af1968a6a6b62f55954270ad48b87ab4f
+                  MATRIX: 961->1|1081->26|1109->28|2513->1408|2539->1425|2578->1426|2628->1448|2835->1637|2848->1642|2887->1643|2937->1665|3030->1727|3062->1732
+                  LINES: 28->1|33->1|34->2|62->30|62->30|62->30|63->31|66->34|66->34|66->34|67->35|68->36|69->37
                   -- GENERATED --
               */
           

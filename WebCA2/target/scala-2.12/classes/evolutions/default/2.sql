@@ -35,3 +35,8 @@ insert into events (id,category_id,name,venue,date,price) values (12,2,'Jimmy Ca
 insert into events (id,category_id,name,venue,date,price) values (13,1,'21 Savage','Staples Center','01-02-2018', 80);
 insert into events (id,category_id,name,venue,date,price) values (14,3,'Chris Angel','Rod Laver Arena','26-01-2018', 75);
 insert into events (id,category_id,name,venue,date,price) values (15,1,'Kanye West','The O2','23-12-2017', 100);
+
+insert into user (email,name,password,role) values ( 'theTicketShark@gmail.com', 'Master Admin', 'admin', 'admin' );
+insert into user (email,name,password,role) values ( 'Brandon@TicketShark.com', 'Brandon Admin', '26Aug97', 'admin' );
+insert into user (email,name,password,role) values ( 'Nathan@TicketShark.com', 'Nathan Admin', '28Jun97', 'admin' );
+insert into user (email,name,password,role) values ( 'Ronan@TicketShark.com', 'Ronan Admin', '18Jul99', 'admin' );

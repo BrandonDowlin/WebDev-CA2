@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/brandon/Web/WebDev-CA2/WebCA2/conf/routes
-// @DATE:Mon Dec 18 17:42:00 GMT 2017
+// @SOURCE:C:/Users/brand/Documents/Web/WebDev-CA2/WebCA2/conf/routes
+// @DATE:Thu Dec 21 18:47:08 GMT 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -20,7 +20,17 @@ package controllers.javascript {
     }
 
   
-    // @LINE:25
+    // @LINE:12
+    def cart: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.cart",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "cart"})
+        }
+      """
+    )
+  
+    // @LINE:20
     def addVenueSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.addVenueSubmit",
       """
@@ -30,7 +40,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:21
+    // @LINE:16
     def deleteEvent: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.deleteEvent",
       """
@@ -40,17 +50,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:13
-    def Gorillaz: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.Gorillaz",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "gorillaz"})
-        }
-      """
-    )
-  
-    // @LINE:22
+    // @LINE:17
     def updateEvent: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.updateEvent",
       """
@@ -60,22 +60,12 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:19
+    // @LINE:14
     def addEvent: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.addEvent",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addevent"})
-        }
-      """
-    )
-  
-    // @LINE:15
-    def Kanye: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.Kanye",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "kanye-west"})
         }
       """
     )
@@ -100,26 +90,6 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:14
-    def Jeff: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.Jeff",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "jeff-dunham"})
-        }
-      """
-    )
-  
-    // @LINE:17
-    def Michael: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.Michael",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "michael-mcintyre"})
-        }
-      """
-    )
-  
     // @LINE:11
     def form: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.form",
@@ -130,17 +100,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:12
-    def Danny: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.Danny",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "danny-brown"})
-        }
-      """
-    )
-  
-    // @LINE:24
+    // @LINE:19
     def addVenue: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.addVenue",
       """
@@ -160,7 +120,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:27
+    // @LINE:22
     def updateVenue: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.updateVenue",
       """
@@ -170,7 +130,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:20
+    // @LINE:15
     def addEventSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.addEventSubmit",
       """
@@ -190,7 +150,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:26
+    // @LINE:21
     def deleteVenue: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.deleteVenue",
       """
@@ -210,19 +170,49 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:16
-    def Keith: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.Keith",
+  }
+
+  // @LINE:24
+  class ReverseLoginController(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:25
+    def loginSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.LoginController.loginSubmit",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "keith-barry"})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "loginSubmit"})
+        }
+      """
+    )
+  
+    // @LINE:26
+    def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.LoginController.logout",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "logout"})
+        }
+      """
+    )
+  
+    // @LINE:24
+    def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.LoginController.login",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
         }
       """
     )
   
   }
 
-  // @LINE:30
+  // @LINE:29
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -230,7 +220,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:30
+    // @LINE:29
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

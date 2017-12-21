@@ -22,15 +22,16 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
+Seq[Any](format.raw/*1.27*/("""
+"""),format.raw/*2.1*/("""<!DOCTYPE html>
 <html>
 
 <head>
@@ -57,35 +58,15 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                 <li><a href="/venues">Venues</a></li>
                 <li><a href="/events">Events</a></li>
                 <li><a href="/aboutus">About us</a></li>
-				<li><a href="/profile">My Profile</a></li>
-				
-				<li class="dropdown">
-          <a href="/events" class="login-a" data-toggle="dropdown"> <b>Sign in</b> <span class="caret"></span> </a>
-			<ul id="login" class="dropdown-menu">
-				<li>
-					 <div class="row">
-							<div class="col-md-12">
-					
-								<p></p>
-                                
-								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-										<div class="form-group">
-											 <label class="email">Email address</label>
-											 <input type="email" class="form-control" placeholder="Email address" required>
-										</div>
-										<div class="form-group">
-											 <label class="password">Password</label>
-											 <input type="password" class="form-control" placeholder="Password" required>
-										<p></p>
-										<div class="form-group">
-											 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-										</div>
-										
-            
-            </ul>
-			</li>
+                """),_display_(/*29.18*/if(user != null )/*29.35*/{_display_(Seq[Any](format.raw/*29.36*/("""
+                    """),format.raw/*30.21*/("""<li><a href="/profile">My Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/cart">Shopping Cart</a></li>
+                    """)))}/*33.23*/else/*33.28*/{_display_(Seq[Any](format.raw/*33.29*/("""
+                    """),format.raw/*34.21*/("""<li><a href="/login">Login</a></li>    
+                    """)))}),format.raw/*35.22*/("""
 
-            </ul>
+            """),format.raw/*37.13*/("""</ul>
         </div>
     </nav>
 
@@ -210,7 +191,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 						their imminent EP release, recorded with the frontman of Chicagoan indie band 
 						Twin Peaks - Wolfhard said: "It is so sweet that we have such a good team at 
 						Royal Mountain Records. I love everyone on it". <a href="http://entertainment.ie/music/news/Finn-Wolfhards-aka-Mike-from-Stranger-Things-band-have-signed-a-record-deal/399552.htm" target="_blank">Read more...</a></p><br>
-                        <h4>Linkin Park paid emotional tribute to Chester Bennington at the AMAs last night </h4>
+                        <h4><br>Linkin Park paid emotional tribute to Chester Bennington at the AMAs last night </h4>
                         <img src="/assets/images/News2.jpg"><p>Linkin Park were the winners of 'Favourite Alternative Rock Artist' award at the 
 						American Music Awards last night, and the band took the opportunity to pay tribute 
 						to their late frontman in an emotional speech. They dedicated the award to Bennington, 
@@ -238,9 +219,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
     }
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(user)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (user) => apply(user)
 
   def ref: this.type = this
 
@@ -249,11 +230,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 18 19:49:28 GMT 2017
-                  SOURCE: /home/brandon/Web/WebDev-CA2/WebCA2/app/views/index.scala.html
-                  HASH: 61d152def18a6a704d405c3fbb448591d0798bad
-                  MATRIX: 1030->0
-                  LINES: 33->1
+                  DATE: Thu Dec 21 18:47:08 GMT 2017
+                  SOURCE: C:/Users/brand/Documents/Web/WebDev-CA2/WebCA2/app/views/index.scala.html
+                  HASH: a3ba2403027b2e7d426646aabbbff7eaea3a0614
+                  MATRIX: 959->1|1079->26|1107->28|2581->1478|2607->1495|2646->1496|2696->1518|2903->1707|2916->1712|2955->1713|3005->1735|3098->1797|3142->1813
+                  LINES: 28->1|33->1|34->2|61->29|61->29|61->29|62->30|65->33|65->33|65->33|66->34|67->35|69->37
                   -- GENERATED --
               */
           

@@ -1,3 +1,4 @@
+@(user: models.users.User)
 <!DOCTYPE html>
 <html>
 
@@ -25,33 +26,13 @@
                 <li><a href="/venues">Venues</a></li>
                 <li><a href="/events">Events</a></li>
                 <li><a href="/aboutus">About us</a></li>
-				<li><a href="/profile">My Profile</a></li>
-				
-				<li class="dropdown">
-          <a href="/events" class="login-a" data-toggle="dropdown"> <b>Sign in</b> <span class="caret"></span> </a>
-			<ul id="login" class="dropdown-menu">
-				<li>
-					 <div class="row">
-							<div class="col-md-12">
-					
-								<p></p>
-                                
-								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-										<div class="form-group">
-											 <label class="email">Email address</label>
-											 <input type="email" class="form-control" placeholder="Email address" required>
-										</div>
-										<div class="form-group">
-											 <label class="password">Password</label>
-											 <input type="password" class="form-control" placeholder="Password" required>
-										<p></p>
-										<div class="form-group">
-											 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-										</div>
-										
-            
-            </ul>
-			</li>
+                @if(user != null ){
+                    <li><a href="/profile">My Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    
+                    } else {
+                    <li><a href="/login">Login</a></li>    
+                    }
 
             </ul>
         </div>
@@ -178,7 +159,7 @@
 						their imminent EP release, recorded with the frontman of Chicagoan indie band 
 						Twin Peaks - Wolfhard said: "It is so sweet that we have such a good team at 
 						Royal Mountain Records. I love everyone on it". <a href="http://entertainment.ie/music/news/Finn-Wolfhards-aka-Mike-from-Stranger-Things-band-have-signed-a-record-deal/399552.htm" target="_blank">Read more...</a></p><br>
-                        <h4>Linkin Park paid emotional tribute to Chester Bennington at the AMAs last night </h4>
+                        <h4><br>Linkin Park paid emotional tribute to Chester Bennington at the AMAs last night </h4>
                         <img src="/assets/images/News2.jpg"><p>Linkin Park were the winners of 'Favourite Alternative Rock Artist' award at the 
 						American Music Awards last night, and the band took the opportunity to pay tribute 
 						to their late frontman in an emotional speech. They dedicated the award to Bennington, 

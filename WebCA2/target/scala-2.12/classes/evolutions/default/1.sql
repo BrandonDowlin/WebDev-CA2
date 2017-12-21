@@ -19,6 +19,14 @@ create table events (
   constraint pk_events primary key (id)
 );
 
+create table user (
+  email                         varchar(255) not null,
+  role                          varchar(255),
+  name                          varchar(255),
+  password                      varchar(255),
+  constraint pk_user primary key (email)
+);
+
 create table venues (
   id                            bigint auto_increment not null,
   name                          varchar(255),
@@ -40,6 +48,8 @@ drop index if exists ix_events_category_id;
 drop table if exists category;
 
 drop table if exists events;
+
+drop table if exists user;
 
 drop table if exists venues;
 

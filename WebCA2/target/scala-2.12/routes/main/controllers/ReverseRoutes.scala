@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/brandon/Web/WebDev-CA2/WebCA2/conf/routes
-// @DATE:Mon Dec 18 17:42:00 GMT 2017
+// @SOURCE:C:/Users/brand/Documents/Web/WebDev-CA2/WebCA2/conf/routes
+// @DATE:Thu Dec 21 18:47:08 GMT 2017
 
 import play.api.mvc.Call
 
@@ -19,40 +19,34 @@ package controllers {
     }
 
   
-    // @LINE:25
+    // @LINE:12
+    def cart(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "cart")
+    }
+  
+    // @LINE:20
     def addVenueSubmit(): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "addVenueSubmit")
     }
   
-    // @LINE:21
+    // @LINE:16
     def deleteEvent(id:Long): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "deleteEvent/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
-    // @LINE:13
-    def Gorillaz(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "gorillaz")
-    }
-  
-    // @LINE:22
+    // @LINE:17
     def updateEvent(id:Long): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "updateEvent/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
-    // @LINE:19
+    // @LINE:14
     def addEvent(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "addevent")
-    }
-  
-    // @LINE:15
-    def Kanye(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "kanye-west")
     }
   
     // @LINE:10
@@ -67,31 +61,13 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "venues")
     }
   
-    // @LINE:14
-    def Jeff(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "jeff-dunham")
-    }
-  
-    // @LINE:17
-    def Michael(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "michael-mcintyre")
-    }
-  
     // @LINE:11
     def form(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "form")
     }
   
-    // @LINE:12
-    def Danny(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "danny-brown")
-    }
-  
-    // @LINE:24
+    // @LINE:19
     def addVenue(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "addvenue")
@@ -103,13 +79,13 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "events" + play.core.routing.queryString(List(if(cat == 0L) None else Some(implicitly[play.api.mvc.QueryStringBindable[Long]].unbind("cat", cat)))))
     }
   
-    // @LINE:27
+    // @LINE:22
     def updateVenue(id:Long): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "updateVenue/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
-    // @LINE:20
+    // @LINE:15
     def addEventSubmit(): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "addEventSubmit")
@@ -121,7 +97,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "aboutus")
     }
   
-    // @LINE:26
+    // @LINE:21
     def deleteVenue(id:Long): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "deleteVenue/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
@@ -133,22 +109,43 @@ package controllers {
       Call("GET", _prefix)
     }
   
-    // @LINE:16
-    def Keith(): Call = {
+  }
+
+  // @LINE:24
+  class ReverseLoginController(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:25
+    def loginSubmit(): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "keith-barry")
+      Call("POST", _prefix + { _defaultPrefix } + "loginSubmit")
+    }
+  
+    // @LINE:26
+    def logout(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "logout")
+    }
+  
+    // @LINE:24
+    def login(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "login")
     }
   
   }
 
-  // @LINE:30
+  // @LINE:29
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:30
+    // @LINE:29
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))

@@ -22,15 +22,15 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object events extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[List[models.Events],List[models.Category],play.twirl.api.HtmlFormat.Appendable] {
+object events extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[List[models.Events],List[models.Category],models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(events: List[models.Events], categories: List[models.Category]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(events: List[models.Events], categories: List[models.Category], user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.66*/("""
+Seq[Any](format.raw/*1.91*/("""
 """),format.raw/*2.1*/("""<!DOCTYPE html>
 <html>
 
@@ -59,19 +59,25 @@ Seq[Any](format.raw/*1.66*/("""
                 <li><a href="/venues">Venues</a></li>
                 <li class="active"><a href="/events">Events</a></li>
                 <li><a href="/aboutus">About us</a></li>
-				<li><a href="/profile">My Profile</a></li>
+                """),_display_(/*30.18*/if(user != null )/*30.35*/{_display_(Seq[Any](format.raw/*30.36*/("""
+                    """),format.raw/*31.21*/("""<li><a href="/profile">My Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/cart">Shopping Cart</a></li>
+                    """)))}/*34.23*/else/*34.28*/{_display_(Seq[Any](format.raw/*34.29*/("""
+                    """),format.raw/*35.21*/("""<li><a href="/login">Login</a></li>    
+                    """)))}),format.raw/*36.22*/("""
                 
-    </nav>
+    """),format.raw/*38.5*/("""</nav>
 
     <div class="container">
 
-        """),_display_(/*36.10*/if(flash.containsKey("success"))/*36.42*/{_display_(Seq[Any](format.raw/*36.43*/("""
-            """),format.raw/*37.13*/("""<div class="alert alert-success">
-              """),_display_(/*38.16*/flash/*38.21*/.get("success")),format.raw/*38.36*/("""
-            """),format.raw/*39.13*/("""</div>
-        """)))}),format.raw/*40.10*/("""
+        """),_display_(/*42.10*/if(flash.containsKey("success"))/*42.42*/{_display_(Seq[Any](format.raw/*42.43*/("""
+            """),format.raw/*43.13*/("""<div class="alert alert-success">
+              """),_display_(/*44.16*/flash/*44.21*/.get("success")),format.raw/*44.36*/("""
+            """),format.raw/*45.13*/("""</div>
+        """)))}),format.raw/*46.10*/("""
   
-        """),format.raw/*42.9*/("""<div class="row">
+        """),format.raw/*48.9*/("""<div class="row">
             <div class="col-sm-8">
                 <div class="well main">
 
@@ -91,9 +97,9 @@ Seq[Any](format.raw/*1.66*/("""
                       
                         <th>Category</th>
                         
-                        <th>Description</th>
+                        <th>Venue</th>
                         
-                        <th>Stock</th>
+                        <th>Date</th>
                         
                         <th>Price</th>
                         
@@ -104,59 +110,61 @@ Seq[Any](format.raw/*1.66*/("""
                         <tbody>
                         
                         <!-- Product row(s) -->
-                        """),_display_(/*75.26*/for(e<-events) yield /*75.40*/ {_display_(Seq[Any](format.raw/*75.42*/("""
-                        """),format.raw/*76.25*/("""<tr>
+                        """),_display_(/*81.26*/for(e<-events) yield /*81.40*/ {_display_(Seq[Any](format.raw/*81.42*/("""
+                        """),format.raw/*82.25*/("""<tr>
                         
-                        <td>"""),_display_(/*78.30*/e/*78.31*/.getId),format.raw/*78.37*/("""</td>
+                        <td>"""),_display_(/*84.30*/e/*84.31*/.getId),format.raw/*84.37*/("""</td>
                         
-                        <td>"""),_display_(/*80.30*/e/*80.31*/.getName),format.raw/*80.39*/("""</td>
+                        <td>"""),_display_(/*86.30*/e/*86.31*/.getName),format.raw/*86.39*/("""</td>
                       
-                        <td>"""),_display_(/*82.30*/e/*82.31*/.getCategory.getName),format.raw/*82.51*/("""</td>
+                        <td>"""),_display_(/*88.30*/e/*88.31*/.getCategory.getName),format.raw/*88.51*/("""</td>
                         
-                        <td>"""),_display_(/*84.30*/e/*84.31*/.getVenue),format.raw/*84.40*/("""</td>
+                        <td>"""),_display_(/*90.30*/e/*90.31*/.getVenue),format.raw/*90.40*/("""</td>
                         
-                        <td>"""),_display_(/*86.30*/e/*86.31*/.getDate),format.raw/*86.39*/("""</td>
+                        <td>"""),_display_(/*92.30*/e/*92.31*/.getDate),format.raw/*92.39*/("""</td>
                       
-                        <td class="numeric">&euro; """),_display_(/*88.53*/("%.0f".format(e.getPrice))),format.raw/*88.80*/("""</td>
-                      
-                        <td>
-                          <a href=""""),_display_(/*91.37*/routes/*91.43*/.HomeController.updateEvent(e.getId)),format.raw/*91.79*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
+                        <td class="numeric">&euro; """),_display_(/*94.53*/("%.0f".format(e.getPrice))),format.raw/*94.80*/("""</td>
+                            """),_display_(/*95.30*/if(user != null)/*95.46*/{_display_(Seq[Any](format.raw/*95.47*/("""
+                        """),format.raw/*96.25*/("""<td>
+                          <a href=""""),_display_(/*97.37*/routes/*97.43*/.HomeController.updateEvent(e.getId)),format.raw/*97.79*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
                             <span class="glyphicon glyphicon-pencil"></span>
                           </a>
                         </td>
                       
                         <td>
-                          <a href=""""),_display_(/*97.37*/routes/*97.43*/.HomeController.deleteEvent(e.getId)),format.raw/*97.79*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
+                          <a href=""""),_display_(/*103.37*/routes/*103.43*/.HomeController.deleteEvent(e.getId)),format.raw/*103.79*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
                             <span class="glyphicon glyphicon-trash"></span>
                           </a>
                         </td>
+                            """)))}),format.raw/*107.30*/("""
+                        """),format.raw/*108.25*/("""</tr>
+                      """)))}),format.raw/*109.24*/("""
                         
-                        </tr>
-                      """)))}),format.raw/*103.24*/("""
-                        
-                        """),format.raw/*105.25*/("""</tbody>
+                        """),format.raw/*111.25*/("""</tbody>
                         
                         </table>
-                        <p>
-                            <a href=""""),_display_(/*109.39*/routes/*109.45*/.HomeController.addEvent()),format.raw/*109.71*/("""">
+                        """),_display_(/*114.26*/if(user != null)/*114.42*/{_display_(Seq[Any](format.raw/*114.43*/("""
+                        """),format.raw/*115.25*/("""<p>
+                            <a href=""""),_display_(/*116.39*/routes/*116.45*/.HomeController.addEvent()),format.raw/*116.71*/("""">
                                 <button class="btn btn-primary">Add a event</button>
                             </a>
-                </div>
+                        """)))}),format.raw/*119.26*/("""
+                """),format.raw/*120.17*/("""</div>
             </div>
         </div>
         <div class="footer">
             <img src="/assets/images/Concert.jpg">
             </img></div>
-            <script src=""""),_display_(/*118.27*/routes/*118.33*/.Assets.versioned("javascripts/main.js")),format.raw/*118.73*/(""""></script>
+            <script src=""""),_display_(/*126.27*/routes/*126.33*/.Assets.versioned("javascripts/main.js")),format.raw/*126.73*/(""""></script>
 </body>
 </html>"""))
       }
     }
   }
 
-  def render(events:List[models.Events],categories:List[models.Category]): play.twirl.api.HtmlFormat.Appendable = apply(events,categories)
+  def render(events:List[models.Events],categories:List[models.Category],user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(events,categories,user)
 
-  def f:((List[models.Events],List[models.Category]) => play.twirl.api.HtmlFormat.Appendable) = (events,categories) => apply(events,categories)
+  def f:((List[models.Events],List[models.Category],models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (events,categories,user) => apply(events,categories,user)
 
   def ref: this.type = this
 
@@ -165,11 +173,11 @@ Seq[Any](format.raw/*1.66*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 18 18:04:48 GMT 2017
-                  SOURCE: /home/brandon/Web/WebDev-CA2/WebCA2/app/views/events.scala.html
-                  HASH: a506812bc7f58cb04369c0fccaa50a3c559eaeb2
-                  MATRIX: 984->1|1143->65|1170->66|2641->1513|2682->1545|2721->1546|2762->1559|2838->1608|2852->1613|2888->1628|2929->1641|2976->1657|3015->1669|4069->2696|4099->2710|4139->2712|4192->2737|4278->2796|4288->2797|4315->2803|4402->2863|4412->2864|4441->2872|4526->2930|4536->2931|4577->2951|4664->3011|4674->3012|4704->3021|4791->3081|4801->3082|4830->3090|4938->3171|4986->3198|5107->3292|5122->3298|5179->3334|5495->3623|5510->3629|5567->3665|5877->3943|5956->3993|6117->4126|6133->4132|6181->4158|6518->4467|6534->4473|6596->4513
-                  LINES: 28->1|33->1|34->2|68->36|68->36|68->36|69->37|70->38|70->38|70->38|71->39|72->40|74->42|107->75|107->75|107->75|108->76|110->78|110->78|110->78|112->80|112->80|112->80|114->82|114->82|114->82|116->84|116->84|116->84|118->86|118->86|118->86|120->88|120->88|123->91|123->91|123->91|129->97|129->97|129->97|135->103|137->105|141->109|141->109|141->109|150->118|150->118|150->118
+                  DATE: Thu Dec 21 18:47:08 GMT 2017
+                  SOURCE: C:/Users/brand/Documents/Web/WebDev-CA2/WebCA2/app/views/events.scala.html
+                  HASH: 553c519f3946108e6d170f64d8986fea516b2e9e
+                  MATRIX: 1002->1|1186->90|1214->92|2616->1470|2642->1487|2681->1488|2731->1510|2938->1699|2951->1704|2990->1705|3040->1727|3133->1789|3184->1813|3261->1863|3302->1895|3341->1896|3383->1910|3460->1960|3474->1965|3510->1980|3552->1994|3600->2011|3641->2025|4721->3078|4751->3092|4791->3094|4845->3120|4933->3181|4943->3182|4970->3188|5059->3250|5069->3251|5098->3259|5185->3319|5195->3320|5236->3340|5325->3402|5335->3403|5365->3412|5454->3474|5464->3475|5493->3483|5603->3566|5651->3593|5714->3629|5739->3645|5778->3646|5832->3672|5901->3714|5916->3720|5973->3756|6296->4051|6312->4057|6370->4093|6635->4326|6690->4352|6752->4382|6833->4434|6956->4529|6982->4545|7022->4546|7077->4572|7148->4615|7164->4621|7212->4647|7393->4796|7440->4814|7646->4992|7662->4998|7724->5038
+                  LINES: 28->1|33->1|34->2|62->30|62->30|62->30|63->31|66->34|66->34|66->34|67->35|68->36|70->38|74->42|74->42|74->42|75->43|76->44|76->44|76->44|77->45|78->46|80->48|113->81|113->81|113->81|114->82|116->84|116->84|116->84|118->86|118->86|118->86|120->88|120->88|120->88|122->90|122->90|122->90|124->92|124->92|124->92|126->94|126->94|127->95|127->95|127->95|128->96|129->97|129->97|129->97|135->103|135->103|135->103|139->107|140->108|141->109|143->111|146->114|146->114|146->114|147->115|148->116|148->116|148->116|151->119|152->120|158->126|158->126|158->126
                   -- GENERATED --
               */
           

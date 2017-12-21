@@ -22,19 +22,19 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object addEvent extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[Form[models.Events],play.twirl.api.HtmlFormat.Appendable] {
+object addEvent extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[Form[models.Events],models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(eventForm: Form[models.Events]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(eventForm: Form[models.Events], user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 /*3.2*/import helper._
 
 
-Seq[Any](format.raw/*1.34*/("""
+Seq[Any](format.raw/*1.59*/("""
 
 """),format.raw/*4.1*/("""
-"""),_display_(/*5.2*/temp("Add Event")/*5.19*/ {_display_(Seq[Any](format.raw/*5.21*/("""
+"""),_display_(/*5.2*/temp("Add Event", user)/*5.25*/ {_display_(Seq[Any](format.raw/*5.27*/("""
 """),format.raw/*6.1*/("""<p class="lead">Add or update a new event</p>
 
     """),_display_(/*8.6*/form(action=routes.HomeController.addEventSubmit(), 'class -> "form-horizontal", 'role -> "form")/*8.103*/ {_display_(Seq[Any](format.raw/*8.105*/("""
@@ -69,9 +69,9 @@ Seq[Any](format.raw/*1.34*/("""
     }
   }
 
-  def render(eventForm:Form[models.Events]): play.twirl.api.HtmlFormat.Appendable = apply(eventForm)
+  def render(eventForm:Form[models.Events],user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(eventForm,user)
 
-  def f:((Form[models.Events]) => play.twirl.api.HtmlFormat.Appendable) = (eventForm) => apply(eventForm)
+  def f:((Form[models.Events],models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (eventForm,user) => apply(eventForm,user)
 
   def ref: this.type = this
 
@@ -80,10 +80,10 @@ Seq[Any](format.raw/*1.34*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 18 17:17:59 GMT 2017
-                  SOURCE: /home/brandon/Web/WebDev-CA2/WebCA2/app/views/addEvent.scala.html
-                  HASH: 48b80916b5e005a3719a0d703cd124bd399cf28c
-                  MATRIX: 964->1|1069->36|1114->33|1142->52|1169->54|1194->71|1233->73|1260->74|1337->126|1443->223|1483->225|1520->236|1533->240|1564->250|1597->257|1691->330|1723->336|1819->411|1856->421|2115->659|2148->666|2242->739|2274->745|2370->820|2403->827|2486->889|2519->895|2666->1015|2681->1021|2727->1046|2860->1149
+                  DATE: Thu Dec 21 18:22:37 GMT 2017
+                  SOURCE: C:/Users/brand/Documents/Web/WebDev-CA2/WebCA2/app/views/addEvent.scala.html
+                  HASH: 4a02f50ffb9032303d433f18f13d5f563385a812
+                  MATRIX: 982->1|1112->63|1157->58|1187->80|1215->83|1246->106|1285->108|1313->110|1392->164|1498->261|1538->263|1577->276|1590->280|1621->290|1656->299|1750->372|1783->379|1879->454|1917->465|2181->708|2216->717|2310->790|2343->797|2439->872|2474->881|2557->943|2592->951|2742->1074|2757->1080|2803->1105|2941->1213
                   LINES: 28->1|31->3|34->1|36->4|37->5|37->5|37->5|38->6|40->8|40->8|40->8|42->10|42->10|42->10|44->12|44->12|45->13|45->13|46->14|51->19|53->21|53->21|54->22|54->22|56->24|56->24|58->26|61->29|61->29|61->29|66->34
                   -- GENERATED --
               */

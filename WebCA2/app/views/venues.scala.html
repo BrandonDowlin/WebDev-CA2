@@ -1,4 +1,4 @@
-@(venues: List[models.Venues])
+@(venues: List[models.Venues], user: models.users.User)
 <!DOCTYPE html>
 <html>
 
@@ -26,7 +26,14 @@
                 <li class="active"><a href="/venues">Venues</a></li>
                 <li><a href="/events">Events</a></li>
                 <li><a href="/aboutus">About us</a></li>
-				<li><a href="/profile">My Profile</a></li>
+				@if(user != null ){
+                    <li><a href="/profile">My Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    
+                    } else {
+                    <li><a href="/login">Login</a></li>    
+                    }
+
                 
     </nav>
 
@@ -74,7 +81,7 @@
                         <td>@v.getCapacity</td>
 
                         
-
+                            @if(user != null){
                         <td>
                           <a href="@routes.HomeController.updateVenue(v.getId)" class="button-xs btn-danger" onclick="return confirmDel();">
                             <span class="glyphicon glyphicon-pencil"></span>
@@ -85,19 +92,23 @@
                             <span class="glyphicon glyphicon-trash"></span>
                           </a>
                         </td>
+                    }
                         </tr>
-                      }
+                      
+                    }
                         
                         </tbody>
                         
                         </table>
                         
+                        @if(user != null){
                         <p>
                           <a href="@routes.HomeController.addVenue()">
                               <button class="btn btn-primary">Add a venue</button>
                           </a>
                       
                         </p>
+                    }
                 </div>
             </div>
         </div>

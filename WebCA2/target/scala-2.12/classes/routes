@@ -9,12 +9,7 @@ GET     /venues                            controllers.HomeController.venues
 GET     /aboutus                           controllers.HomeController.aboutus
 GET     /profile                           controllers.HomeController.profile
 GET     /form                              controllers.HomeController.form
-GET     /danny-brown                       controllers.HomeController.Danny
-GET     /gorillaz                          controllers.HomeController.Gorillaz
-GET     /jeff-dunham                       controllers.HomeController.Jeff
-GET     /kanye-west                        controllers.HomeController.Kanye
-GET     /keith-barry                       controllers.HomeController.Keith
-GET     /michael-mcintyre                  controllers.HomeController.Michael
+GET     /cart                              controllers.HomeController.cart
 
 GET     /addevent                          controllers.HomeController.addEvent
 POST    /addEventSubmit                    controllers.HomeController.addEventSubmit
@@ -25,6 +20,10 @@ GET     /addvenue                          controllers.HomeController.addVenue
 POST    /addVenueSubmit                    controllers.HomeController.addVenueSubmit
 GET     /deleteVenue/:id                   controllers.HomeController.deleteVenue(id: Long)
 GET     /updateVenue/:id                   controllers.HomeController.updateVenue(id: Long)
+
+GET     /login                      controllers.LoginController.login 
+POST    /loginSubmit                controllers.LoginController.loginSubmit
+GET     /logout                     controllers.LoginController.logout
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

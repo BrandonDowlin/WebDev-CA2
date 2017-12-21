@@ -22,15 +22,15 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object venues extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[List[models.Venues],play.twirl.api.HtmlFormat.Appendable] {
+object venues extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[List[models.Venues],models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(venues: List[models.Venues]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(venues: List[models.Venues], user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.31*/("""
+Seq[Any](format.raw/*1.56*/("""
 """),format.raw/*2.1*/("""<!DOCTYPE html>
 <html>
 
@@ -58,9 +58,16 @@ Seq[Any](format.raw/*1.31*/("""
                 <li class="active"><a href="/venues">Venues</a></li>
                 <li><a href="/events">Events</a></li>
                 <li><a href="/aboutus">About us</a></li>
-				<li><a href="/profile">My Profile</a></li>
+				"""),_display_(/*29.6*/if(user != null )/*29.23*/{_display_(Seq[Any](format.raw/*29.24*/("""
+                    """),format.raw/*30.21*/("""<li><a href="/profile">My Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/cart">Shopping Cart</a></li>
+                    """)))}/*33.23*/else/*33.28*/{_display_(Seq[Any](format.raw/*33.29*/("""
+                    """),format.raw/*34.21*/("""<li><a href="/login">Login</a></li>    
+                    """)))}),format.raw/*35.22*/("""
+
                 
-    </nav>
+    """),format.raw/*38.5*/("""</nav>
 
     <div class="container">
 
@@ -92,45 +99,49 @@ Seq[Any](format.raw/*1.31*/("""
                         
                         <tbody>
                         
-                        """),_display_(/*63.26*/for(v<-venues) yield /*63.40*/ {_display_(Seq[Any](format.raw/*63.42*/("""
-                        """),format.raw/*64.25*/("""<tr>
+                        """),_display_(/*70.26*/for(v<-venues) yield /*70.40*/ {_display_(Seq[Any](format.raw/*70.42*/("""
+                        """),format.raw/*71.25*/("""<tr>
                         
-                        <td>"""),_display_(/*66.30*/v/*66.31*/.getId),format.raw/*66.37*/("""</td>
+                        <td>"""),_display_(/*73.30*/v/*73.31*/.getId),format.raw/*73.37*/("""</td>
                         
-                        <td>"""),_display_(/*68.30*/v/*68.31*/.getName),format.raw/*68.39*/("""</td>
+                        <td>"""),_display_(/*75.30*/v/*75.31*/.getName),format.raw/*75.39*/("""</td>
                         
-                        <td>"""),_display_(/*70.30*/v/*70.31*/.getCountry),format.raw/*70.42*/("""</td>
+                        <td>"""),_display_(/*77.30*/v/*77.31*/.getCountry),format.raw/*77.42*/("""</td>
                         
-                        <td>"""),_display_(/*72.30*/v/*72.31*/.getCity),format.raw/*72.39*/("""</td>
+                        <td>"""),_display_(/*79.30*/v/*79.31*/.getCity),format.raw/*79.39*/("""</td>
                         
-                        <td>"""),_display_(/*74.30*/v/*74.31*/.getCapacity),format.raw/*74.43*/("""</td>
+                        <td>"""),_display_(/*81.30*/v/*81.31*/.getCapacity),format.raw/*81.43*/("""</td>
 
                         
-
-                        <td>
-                          <a href=""""),_display_(/*79.37*/routes/*79.43*/.HomeController.updateVenue(v.getId)),format.raw/*79.79*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
+                            """),_display_(/*84.30*/if(user != null)/*84.46*/{_display_(Seq[Any](format.raw/*84.47*/("""
+                        """),format.raw/*85.25*/("""<td>
+                          <a href=""""),_display_(/*86.37*/routes/*86.43*/.HomeController.updateVenue(v.getId)),format.raw/*86.79*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
                             <span class="glyphicon glyphicon-pencil"></span>
                           </a>
                         </td>
                         <td>
-                          <a href=""""),_display_(/*84.37*/routes/*84.43*/.HomeController.deleteVenue(v.getId)),format.raw/*84.79*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
+                          <a href=""""),_display_(/*91.37*/routes/*91.43*/.HomeController.deleteVenue(v.getId)),format.raw/*91.79*/("""" class="button-xs btn-danger" onclick="return confirmDel();">
                             <span class="glyphicon glyphicon-trash"></span>
                           </a>
                         </td>
-                        </tr>
-                      """)))}),format.raw/*89.24*/("""
+                    """)))}),format.raw/*95.22*/("""
+                        """),format.raw/*96.25*/("""</tr>
+                      
+                    """)))}),format.raw/*98.22*/("""
                         
-                        """),format.raw/*91.25*/("""</tbody>
+                        """),format.raw/*100.25*/("""</tbody>
                         
                         </table>
                         
-                        <p>
-                          <a href=""""),_display_(/*96.37*/routes/*96.43*/.HomeController.addVenue()),format.raw/*96.69*/("""">
+                        """),_display_(/*104.26*/if(user != null)/*104.42*/{_display_(Seq[Any](format.raw/*104.43*/("""
+                        """),format.raw/*105.25*/("""<p>
+                          <a href=""""),_display_(/*106.37*/routes/*106.43*/.HomeController.addVenue()),format.raw/*106.69*/("""">
                               <button class="btn btn-primary">Add a venue</button>
                           </a>
                       
                         </p>
-                </div>
+                    """)))}),format.raw/*111.22*/("""
+                """),format.raw/*112.17*/("""</div>
             </div>
         </div>
         
@@ -144,9 +155,9 @@ Seq[Any](format.raw/*1.31*/("""
     }
   }
 
-  def render(venues:List[models.Venues]): play.twirl.api.HtmlFormat.Appendable = apply(venues)
+  def render(venues:List[models.Venues],user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(venues,user)
 
-  def f:((List[models.Venues]) => play.twirl.api.HtmlFormat.Appendable) = (venues) => apply(venues)
+  def f:((List[models.Venues],models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (venues,user) => apply(venues,user)
 
   def ref: this.type = this
 
@@ -155,11 +166,11 @@ Seq[Any](format.raw/*1.31*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 18 18:14:54 GMT 2017
-                  SOURCE: /home/brandon/Web/WebDev-CA2/WebCA2/app/views/venues.scala.html
-                  HASH: 31fda3f7239cff35d8267345eb98d63df609edb5
-                  MATRIX: 962->1|1086->30|1113->31|3459->2353|3489->2367|3529->2369|3582->2394|3668->2453|3678->2454|3705->2460|3792->2520|3802->2521|3831->2529|3918->2589|3928->2590|3960->2601|4047->2661|4057->2662|4086->2670|4173->2730|4183->2731|4216->2743|4341->2841|4356->2847|4413->2883|4706->3149|4721->3155|4778->3191|5062->3444|5140->3494|5323->3650|5338->3656|5385->3682
-                  LINES: 28->1|33->1|34->2|95->63|95->63|95->63|96->64|98->66|98->66|98->66|100->68|100->68|100->68|102->70|102->70|102->70|104->72|104->72|104->72|106->74|106->74|106->74|111->79|111->79|111->79|116->84|116->84|116->84|121->89|123->91|128->96|128->96|128->96
+                  DATE: Thu Dec 21 18:47:08 GMT 2017
+                  SOURCE: C:/Users/brand/Documents/Web/WebDev-CA2/WebCA2/app/views/venues.scala.html
+                  HASH: a96d730d6cb8a5d66a23a4dbc25fc82566d81962
+                  MATRIX: 980->1|1129->55|1157->57|2552->1429|2578->1446|2617->1447|2667->1469|2874->1658|2887->1663|2926->1664|2976->1686|3069->1748|3122->1774|4095->2720|4125->2734|4165->2736|4219->2762|4307->2823|4317->2824|4344->2830|4433->2892|4443->2893|4472->2901|4561->2963|4571->2964|4603->2975|4692->3037|4702->3038|4731->3046|4820->3108|4830->3109|4863->3121|4954->3185|4979->3201|5018->3202|5072->3228|5141->3270|5156->3276|5213->3312|5511->3583|5526->3589|5583->3625|5839->3850|5893->3876|5976->3928|6057->3980|6206->4101|6232->4117|6272->4118|6327->4144|6396->4185|6412->4191|6460->4217|6687->4412|6734->4430
+                  LINES: 28->1|33->1|34->2|61->29|61->29|61->29|62->30|65->33|65->33|65->33|66->34|67->35|70->38|102->70|102->70|102->70|103->71|105->73|105->73|105->73|107->75|107->75|107->75|109->77|109->77|109->77|111->79|111->79|111->79|113->81|113->81|113->81|116->84|116->84|116->84|117->85|118->86|118->86|118->86|123->91|123->91|123->91|127->95|128->96|130->98|132->100|136->104|136->104|136->104|137->105|138->106|138->106|138->106|143->111|144->112
                   -- GENERATED --
               */
           

@@ -1,3 +1,4 @@
+@(user: models.users.User)
 <!DOCTYPE html>
 <html>
 
@@ -26,7 +27,12 @@
                 <li><a href="/venues">Venues</a></li>
                 <li><a href="/events">Events</a></li>
                 <li class="active"><a href="/aboutus">About us</a></li>
-                <li><a href="/profile">My Profile</a></li>
+                @if(user != null ){
+                    <li><a href="/profile">My Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    } else {
+                    <li><a href="/login">Login</a></li>    
+                    }
 			</ul>
 
     </nav>

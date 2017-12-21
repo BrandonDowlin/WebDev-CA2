@@ -293,3 +293,108 @@ img {
 .mainAbout h4{
 	font-size: 20px;
 }
+
+@media (max-width: 800px) {
+    .cart {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+    .item {
+      height: auto;
+      justify-content: center;
+    }
+    .numOfTickets,
+    .description {
+      width: 100%;
+      text-align: center;
+      margin: 6px 0;
+    }
+    .button {
+      margin-right: 20px;
+    }
+  }
+  
+  .cart{
+      width: 750px;
+      height: 423px;
+      margin: 80px auto;
+      background: #303030;
+      border-radius: 1em;
+      border: .05em solid black;
+      
+  }
+  
+  .title{
+      height: 60px;
+      border-bottom: 1px solid #E1E8EE;
+      padding: 20px 30px;
+      color: #5E6977;
+      font-size: 18px;
+      font-weight: 400;
+  }
+  .item{
+      padding: 20px 30px;
+      height: 120px:
+  }
+  .button{
+      position: relative;
+      padding-top: 30px;
+      margin-right: 60px;
+  }
+  .delete{
+      display: inline-block;
+      Cursor: pointer;
+      background: url('../IMG/trashcan.jpg');
+      background-size: cover;
+  }
+  .delete{
+      width: 18px;
+      height: 17px;
+  }
+  .description {
+    padding-top: 10px;
+    margin-right: 60px;
+    width: 115px;
+  }
+   
+  .description span {
+    display: block;
+    font-size: 14px;
+    color: #43484D;
+    font-weight: 400;
+  }
+  .numOfTickets {
+    padding-top: 20px;
+    margin-right: 60px;
+  }
+  .numOfTickets input {
+    text-align: center;
+    width: 32px;
+    font-size: 16px;
+    background-color:black;
+    color:white;
+    border:.1em solid white
+  }
+   
+  button[class*=btn] {
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  .minus img {
+    margin-bottom: 3px;
+  }
+  .plus img {
+    margin-top: 2px;
+  }
+   
+  button:focus,
+  input:focus {
+    outline:0;
+  }
+  
+  

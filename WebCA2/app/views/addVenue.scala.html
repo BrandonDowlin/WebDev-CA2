@@ -1,8 +1,8 @@
-@(venueForm: Form[models.Venues])
+@(venueForm: Form[models.Venues], user: models.users.User)
 
 @import helper._
 
-@temp("Add Venue") {
+@temp("Add Venue", user) {
 <p class="lead">Add or update a new venue</p>
 
     @form(action=routes.HomeController.addVenueSubmit(), 'class -> "form-horizontal", 'role -> "form") {

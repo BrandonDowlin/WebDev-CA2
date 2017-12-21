@@ -9,7 +9,7 @@ import java.util.*;
 import javax.inject.Inject;
 
 import models.*;
-
+import models.users.*;
 import views.html.*;
 /**
  * This controller contains an action to handle HTTP requests
@@ -24,7 +24,7 @@ public class HomeController extends Controller {
      * <code>GET</code> request with a path of <code>/</code>.
      */
     public Result index() {
-        return ok(views.html.index.render());
+        return ok(index.render(User.getUserById(session().get("email"))));
     }
     public Result events(Long cat) {
         List<Events> eventList = null;
@@ -34,40 +34,21 @@ public class HomeController extends Controller {
         } else {
             eventList = Category.find.ref(cat).getEvents();
         }
-        return ok(events.render(eventList, categoryList));
+        return ok(events.render(eventList, categoryList, User.getUserById(session().get("email"))));
     }
     public Result venues() {
         List<Venues> venueList = Venues.findAll();
-        return ok(venues.render(venueList));
+        return ok(venues.render(venueList, User.getUserById(session().get("email"))));
     }
     public Result form() {
-        return ok(views.html.form.render());
+        return ok(views.html.form.render(User.getUserById(session().get("email"))));
     }
     public Result profile() {
-        return ok(views.html.profile.render());
+        return ok(views.html.profile.render(User.getUserById(session().get("email"))));
     }
     public Result aboutus() {
-        return ok(views.html.aboutus.render());
+        return ok(views.html.aboutus.render(User.getUserById(session().get("email"))));
     }
-    public Result Danny() {
-        return ok(views.html.Danny.render());
-    }
-    public Result Gorillaz() {
-        return ok(views.html.Gorillaz.render());
-    }
-    public Result Jeff() {
-        return ok(views.html.Jeff.render());
-    }
-    public Result Kanye() {
-        return ok(views.html.Kanye.render());
-    }
-    public Result Keith() {
-        return ok(views.html.Keith.render());
-    }
-    public Result Michael() {
-        return ok(views.html.Michael.render());
-    }
-
     
 
     private FormFactory formFactory;
@@ -76,17 +57,22 @@ public class HomeController extends Controller {
         public HomeController(FormFactory f){
             this.formFactory = f;
         }
+        
+        @Security.Authenticated(Secured.class)
+            @With(AuthAdmin.class)
         public Result addEvent(){
             Form<Events> eventForm = formFactory.form(Events.class);
-            return ok(addEvent.render(eventForm));
+            return ok(addEvent.render(eventForm, User.getUserById(session().get("email"))));
         }
 
+        @Security.Authenticated(Secured.class)
+            @With(AuthAdmin.class)
         public Result addEventSubmit(){
     
             Form<Events> newEventForm = formFactory.form(Events.class).bindFromRequest();
     
             if (newEventForm.hasErrors()) {
-                return badRequest(addEvent.render(newEventForm));
+                return badRequest(addEvent.render(newEventForm, User.getUserById(session().get("email"))));
             } else {
                 Events newEvent = newEventForm.get();
                 if (newEvent.getId() == null){
@@ -100,13 +86,16 @@ public class HomeController extends Controller {
         }
 
 
-
+    @Security.Authenticated(Secured.class)
+    @With(AuthAdmin.class)
     public Result deleteEvent(Long id){
         Events.find.ref(id).delete();
         flash("success", "Event has been deleted");
         return redirect(routes.HomeController.events(0));
     }
 
+    @Security.Authenticated(Secured.class)
+    @With(AuthAdmin.class)
     @Transactional
     public Result updateEvent(Long id){
         Events e;
@@ -118,20 +107,24 @@ public class HomeController extends Controller {
         } catch (Exception ex) {
             return badRequest("error");
         }
-        return ok(addEvent.render(eventForm));
+        return ok(addEvent.render(eventForm, User.getUserById(session().get("email"))));
     }
 
+    @Security.Authenticated(Secured.class)
+    @With(AuthAdmin.class)
     public Result addVenue(){
         Form<Venues> venueForm = formFactory.form(Venues.class);
-        return ok(addVenue.render(venueForm));
+        return ok(addVenue.render(venueForm, User.getUserById(session().get("email"))));
     }
 
+    @Security.Authenticated(Secured.class)
+    @With(AuthAdmin.class)
     public Result addVenueSubmit(){
         
                 Form<Venues> newVenueForm = formFactory.form(Venues.class).bindFromRequest();
         
                 if (newVenueForm.hasErrors()) {
-                    return badRequest(addVenue.render(newVenueForm));
+                    return badRequest(addVenue.render(newVenueForm, User.getUserById(session().get("email"))));
                 } else {
                     Venues newVenue = newVenueForm.get();
                     if (newVenue.getId() == null){
@@ -143,12 +136,18 @@ public class HomeController extends Controller {
                     return redirect(controllers.routes.HomeController.venues());
                 }
             }
+
+            @Security.Authenticated(Secured.class)
+            @With(AuthAdmin.class)
             public Result deleteVenue(Long id){
                 Venues.find.ref(id).delete();
                 flash("success", "Venue has been deleted");
                 return redirect(routes.HomeController.venues());
             }
 
+
+            @Security.Authenticated(Secured.class)
+            @With(AuthAdmin.class)
             @Transactional
             public Result updateVenue(Long id){
                 Venues  v;
@@ -160,6 +159,6 @@ public class HomeController extends Controller {
                 } catch (Exception ex) {
                     return badRequest("error");
                 }
-                return ok(addVenue.render(venueForm));
+                return ok(addVenue.render(venueForm, User.getUserById(session().get("email"))));
             }
 }

@@ -22,19 +22,19 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object addVenue extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[Form[models.Venues],play.twirl.api.HtmlFormat.Appendable] {
+object addVenue extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[Form[models.Venues],models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(venueForm: Form[models.Venues]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(venueForm: Form[models.Venues], user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 /*3.2*/import helper._
 
 
-Seq[Any](format.raw/*1.34*/("""
+Seq[Any](format.raw/*1.59*/("""
 
 """),format.raw/*4.1*/("""
-"""),_display_(/*5.2*/temp("Add Venue")/*5.19*/ {_display_(Seq[Any](format.raw/*5.21*/("""
+"""),_display_(/*5.2*/temp("Add Venue", user)/*5.25*/ {_display_(Seq[Any](format.raw/*5.27*/("""
 """),format.raw/*6.1*/("""<p class="lead">Add or update a new venue</p>
 
     """),_display_(/*8.6*/form(action=routes.HomeController.addVenueSubmit(), 'class -> "form-horizontal", 'role -> "form")/*8.103*/ {_display_(Seq[Any](format.raw/*8.105*/("""
@@ -62,9 +62,9 @@ Seq[Any](format.raw/*1.34*/("""
     }
   }
 
-  def render(venueForm:Form[models.Venues]): play.twirl.api.HtmlFormat.Appendable = apply(venueForm)
+  def render(venueForm:Form[models.Venues],user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(venueForm,user)
 
-  def f:((Form[models.Venues]) => play.twirl.api.HtmlFormat.Appendable) = (venueForm) => apply(venueForm)
+  def f:((Form[models.Venues],models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (venueForm,user) => apply(venueForm,user)
 
   def ref: this.type = this
 
@@ -73,10 +73,10 @@ Seq[Any](format.raw/*1.34*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 18 17:42:00 GMT 2017
-                  SOURCE: /home/brandon/Web/WebDev-CA2/WebCA2/app/views/addVenue.scala.html
-                  HASH: 66e3ec735966b3877ecdd92f135292c14ab09d03
-                  MATRIX: 964->1|1069->36|1114->33|1142->52|1169->54|1194->71|1233->73|1260->74|1337->126|1443->223|1483->225|1520->236|1533->240|1564->250|1597->257|1691->330|1723->336|1823->415|1855->421|1949->494|1981->500|2083->581|2116->588|2199->650|2232->656|2379->776|2394->782|2437->804|2570->907
+                  DATE: Thu Dec 21 17:00:50 GMT 2017
+                  SOURCE: C:/Users/brand/Documents/Web/WebDev-CA2/WebCA2/app/views/addVenue.scala.html
+                  HASH: 0b48529878a31bca2541046a3052319a0d8b56f6
+                  MATRIX: 982->1|1112->63|1157->58|1187->80|1215->83|1246->106|1285->108|1313->110|1392->164|1498->261|1538->263|1577->276|1590->280|1621->290|1656->299|1750->372|1783->379|1883->458|1916->465|2010->538|2043->545|2145->626|2180->635|2263->697|2298->705|2448->828|2463->834|2506->856|2644->964
                   LINES: 28->1|31->3|34->1|36->4|37->5|37->5|37->5|38->6|40->8|40->8|40->8|42->10|42->10|42->10|44->12|44->12|45->13|45->13|46->14|46->14|47->15|47->15|49->17|49->17|51->19|54->22|54->22|54->22|59->27
                   -- GENERATED --
               */
